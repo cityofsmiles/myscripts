@@ -3,10 +3,9 @@
 userscripts_dir="/home/mo/.config/sxmo/userscripts"
 myscripts_dir="/home/mo/Documents/myscripts"
 
-
-cp -r $userscripts_dir $myscripts_dir
-
 cd $myscripts_dir
+
+cp -r userscripts/* $userscripts_dir
 
 git add .
 

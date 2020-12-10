@@ -7,7 +7,7 @@ cd $myscripts_dir
 
 git pull
 
-cp userscripts/ $userscripts_dir/ 
+cp -r userscripts/* $userscripts_dir/ 
 
 
 
