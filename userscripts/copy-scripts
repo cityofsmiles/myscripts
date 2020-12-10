@@ -1,0 +1,10 @@
+!#/bin/bash
+
+userscripts_dir="/home/mo/.config/sxmo/userscripts"
+myscripts_dir="/home/mo/Documents/myscripts"
+
+cd $myscripts_dir
+
+cp -r userscripts/* $userscripts_dir
+
+
