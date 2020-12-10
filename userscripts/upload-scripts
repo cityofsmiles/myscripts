@@ -1,0 +1,15 @@
+!#/bin/bash
+
+userscripts_dir="/home/mo/.config/sxmo/userscripts"
+myscripts_dir="/home/mo/Documents/myscripts"
+
+
+cp -r $userscripts_dir $myscripts_dir
+
+cd $myscripts_dir
+
+git add .
+
+git commit -m "added/edited scripts"
+
+git push -u origin main
