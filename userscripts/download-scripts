@@ -1,0 +1,14 @@
+!#/bin/bash
+
+userscripts_dir="/home/mo/.config/sxmo/userscripts"
+myscripts_dir="/home/mo/Documents/myscripts"
+
+cd $myscripts_dir
+
+git pull
+
+cp userscripts/ $userscripts_dir/ 
+
+
+
+
