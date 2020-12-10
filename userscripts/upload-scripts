@@ -12,4 +12,4 @@ git add .
 
 git commit -m "added/edited scripts"
 
-git push -u origin main
+xfce4-terminal --zoom=3 --command='git push -u origin main'
