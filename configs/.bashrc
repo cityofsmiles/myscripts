@@ -16,7 +16,7 @@ alias pr='yay -R'
 alias sound='alsamixer'
 alias bright='xrandr --output LVDS-1 --brightness'
 alias sr='yay -Ss'
-alias anddev='cd /home/jonathan/Android-Development/Android/ && source bin/activate && cd examautochecker'
+#alias anddev='cd /home/jonathan/Android-Development/Android/ && source bin/activate && cd examautochecker'
 alias wifioff='nmcli radio wifi off'
 alias wifion='nmcli radio wifi on'
 alias pdf2jpg='python3 /home/jonathan/Documents/myscripts/python-scripts/pdf2jpg.py'
@@ -28,7 +28,7 @@ alias gpc='git push -u origin calendar'
 alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
 alias cl='sudo yay -Yc'
 alias gpmn='git push -u origin main'
-alias cpconf='cp /home/jonathan/.config/i3/config /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs'
+alias cpcn='cp /home/jonathan/.config/i3/config /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.config/i3status/config /home/jonathan/Documents/myscripts/configs'
 
 
 export PATH=/home/jonathan/idea-IC-202.6948.69/bin/:/home/jonathan/.local/bin:$PATH
