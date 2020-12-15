@@ -34,7 +34,7 @@ alias okular='flatpak run --file-forwarding org.kde.okular'
 
 export PATH=/home/jonathan/idea-IC-202.6948.69/bin/:/home/jonathan/.local/bin:$PATH
 
-export EDITOR=nano
+export EDITOR=mousepad
 
 shopt -s extglob
 
