@@ -28,7 +28,8 @@ alias gpc='git push -u origin calendar'
 alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
 alias cl='sudo yay -Yc'
 alias gpmn='git push -u origin main'
-alias cpcn='cp /home/jonathan/.config/i3/config /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.config/i3status/config /home/jonathan/Documents/myscripts/configs'
+alias cpcn='cp /home/jonathan/.config/i3/config /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.config/i3status/config /home/jonathan/Documents/myscripts/configs; cp /home/jonathan/.config/ranger/rifle.conf /home/jonathan/Documents/myscripts/configs'
+alias okular='flatpak run --file-forwarding org.kde.okular'
 
 
 export PATH=/home/jonathan/idea-IC-202.6948.69/bin/:/home/jonathan/.local/bin:$PATH
