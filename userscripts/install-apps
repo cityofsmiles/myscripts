@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo apk add bash xfce4-terminal xfce4-screenshooter mousepad chromium flatpak texmaker texlive-full nano thunar

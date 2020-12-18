@@ -1,0 +1,25 @@
+#!/bin/bash
+
+flatpak install flathub org.libreoffice.LibreOffice
+
+flatpak install flathub org.chromium.Chromium
+
+ flatpak install flathub org.mozilla.firefox
+
+ flatpak install flathub org.kde.okular 
+
+ flatpak install flathub org.texstudio.TeXstudio 
+
+ flatpak install flathub org.mozilla.Thunderbird
+
+flatpak install flathub com.github.Eloston.UngoogledChromium
+
+flatpak install flathub org.videolan.VLC
+
+#flatpak install flathub
+
+#flatpak install flathub
+
+#flatpak install flathub
+
+
