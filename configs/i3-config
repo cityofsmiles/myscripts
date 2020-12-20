@@ -420,6 +420,17 @@ mode "$mode_gaps_outer" {
 
 # Launch personal startup apps
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-notes2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-word2cp.sh
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
 
 
 # My personal shortcuts
