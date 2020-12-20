@@ -7,6 +7,7 @@ set $super Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
+workspace_layout tabbed
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 1
@@ -418,19 +419,6 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Launch personal startup apps
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-notes2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-word2cp.sh
-#exec --no-startup-id
-#exec --no-startup-id
-#exec --no-startup-id
-#exec --no-startup-id
-#exec --no-startup-id
 
 
 # My personal shortcuts
@@ -449,3 +437,29 @@ bindsym $super+Control+w exec --no-startup-id chromium
 bindsym $super+w exec --no-startup-id brave
 bindsym $super+n exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/txt/notes
 bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
+bindsym $super+t exec --no-startup-id telegram-desktop
+bindsym $super+p exec --no-startup-id pamac-manager
+bindsym $super+f exec --no-startup-id firefox
+bindsym $super+g exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
+bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
+bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
+bindsym $super+v exec --no-startup-id terminal -e ranger /home/jonathan/Downloads
+bindsym $super+m exec --no-startup-id mousepad
+bindsym $super+l exec --no-startup-id libreoffice
+bindsym $super+r exec --no-startup-id terminal -e ranger
+
+
+# Launch personal startup apps
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-notes2cp.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-word2cp.sh
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+#exec --no-startup-id
+
