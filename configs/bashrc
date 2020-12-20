@@ -158,7 +158,7 @@ alias gpc='git push -u origin calendar'
 alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
 alias cl='sudo yay -Yc'
 alias gpmn='git push -u origin main'
-alias cpcn='cp -u /home/jonathan/.i3/config /home/jonathan/Documents/myscripts/configs/i3-config; cp -u /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs/bashrc; cp -u /home/jonathan/.config/i3status/config /home/jonathan/Documents/myscripts/configs/i3status-config; cp -u /home/jonathan/.config/ranger/rifle.conf /home/jonathan/Documents/myscripts/configs'
+alias cpcn='cp -u /home/jonathan/.i3/config /home/jonathan/Documents/myscripts/configs/i3-config; cp -u /home/jonathan/.bashrc /home/jonathan/Documents/myscripts/configs/bashrc; cp -u /home/jonathan/.config/i3status/config /home/jonathan/Documents/myscripts/configs/i3status-config; cp -u /home/jonathan/.config/ranger/rifle.conf /home/jonathan/Documents/myscripts/configs; cp -u /home/jonathan/.Xmodmap /home/jonathan/Documents/myscripts/configs/Xmodmap'
 alias gcal='python /home/jonathan/gencal/calculators/gen_cal_v2/gen_cal_v2.py'
 
 
