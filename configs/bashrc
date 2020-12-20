@@ -90,7 +90,7 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
+#alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
@@ -116,7 +116,7 @@ shopt -s histappend
 #
 # # ex - archive extractor
 # # usage: ex <file>
-ex ()
+extract ()
 {
   if [ -f $1 ] ; then
     case $1 in
@@ -139,6 +139,7 @@ ex ()
 }
 
 
+# My personal shortcuts 
 alias u='yay; flatpak update'
 alias srb='source ~/.bashrc'
 alias in='yay -S'

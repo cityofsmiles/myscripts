@@ -419,11 +419,12 @@ mode "$mode_gaps_outer" {
 }
 
 # Launch personal startup apps
-
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
 
 
 # My personal shortcuts
 bindsym $super+c exec --no-startup-id terminal
+bindsym $super+o exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh
 bindsym $super+Control+o exec --no-startup-id poweroff
 bindsym $super+Control+r exec --no-startup-id reboot
 bindsym $super+s exec --no-startup-id terminal -e ranger /home/jonathan/Documents/myscripts
@@ -433,6 +434,7 @@ bindsym $super+Control+b exec --no-startup-id mousepad /home/jonathan/.i3/config
 bindsym $super+x exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/latex/20-21
 bindsym $super+e exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/excel/shs/20-21
 bindsym $super+b exec --no-startup-id mousepad /home/jonathan/.bashrc
-
-
-
+bindsym $super+Control+w exec --no-startup-id chromium
+bindsym $super+w exec --no-startup-id brave
+bindsym $super+n exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/txt/notes
+bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
