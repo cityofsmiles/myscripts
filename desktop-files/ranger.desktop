@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Ranger
+Exec=kgx -e ranger &
+Icon=/home/jonathan/Documents/myscripts/icons/ranger.png
+Keywords=command;prompt;cmd;commandline;run;shell;terminal;kgx;
+Terminal=false
+Type=Application
+Categories=System;TerminalEmulator;X-GNOME-Utilities;GTK;GNOME;
+StartupNotify=true
+DBusActivatable=true
+X-GNOME-UsesNotifications=true
