@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Bitwarden
+Exec=firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/personal" --kiosk https://vault.bitwarden.com
+Icon=/home/jonathan/Documents/myscripts/icons/bitwarden.png
+Terminal=false
+Type=Application
+StartupNotify=true
+DBusActivatable=true
+X-GNOME-UsesNotifications=true

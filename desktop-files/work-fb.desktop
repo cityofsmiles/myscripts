@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Work
 Exec=firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/work" --kiosk https://m.facebook.com/messages/
-Icon=/home/jonathan/Documents/myscripts/icons/fb.jpeg
+Icon=/home/jonathan/Documents/myscripts/icons/messenger2.png
 Keywords=command;prompt;cmd;commandline;run;shell;terminal;kgx;
 Terminal=false
 Type=Application
