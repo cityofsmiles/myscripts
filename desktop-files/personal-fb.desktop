@@ -1,11 +1,11 @@
 [Desktop Entry]
 Name=Personal
-Exec=firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/personal" https://m.facebook.com/messages/
+Exec=firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/personal" --kiosk https://m.facebook.com/messages/
 Icon=/home/jonathan/Documents/myscripts/icons/messenger.png
-Keywords=command;prompt;cmd;commandline;run;shell;terminal;kgx;
+#Keywords=command;prompt;cmd;commandline;run;shell;terminal;kgx;
 Terminal=false
 Type=Application
-Categories=System;TerminalEmulator;X-GNOME-Utilities;GTK;GNOME;
+#Categories=System;TerminalEmulator;X-GNOME-Utilities;GTK;GNOME;
 StartupNotify=true
 DBusActivatable=true
 X-GNOME-UsesNotifications=true
