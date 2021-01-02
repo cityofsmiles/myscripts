@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Ranger
-Exec=kgx -e ranger &
+Exec=kgx -e ranger
 Icon=/home/jonathan/Documents/myscripts/icons/ranger.png
 Keywords=command;prompt;cmd;commandline;run;shell;terminal;kgx;
 Terminal=false
