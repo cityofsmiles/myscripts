@@ -453,15 +453,15 @@ bindsym $super+Shift+w exec --no-startup-id /home/jonathan/Documents/myscripts/b
 
 # Launch personal startup apps
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-notes2cp.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-word2cp.sh
 #exec_always --no-startup-id bar mode toggle
-#exec --no-startup-id
-#exec --no-startup-id
-#exec --no-startup-id
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/docs2pine.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/latex2pine.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/excel2pine.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
 #exec --no-startup-id
 
