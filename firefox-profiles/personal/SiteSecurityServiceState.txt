@@ -2,7 +2,7 @@ accounts.firefox.com:HSTS	1	18629	1640980101051,1,1,2
 www.google-analytics.com:HSTS	1	18629	1620463887516,1,1,2
 api.accounts.firefox.com:HSTS	5	18633	1641430229730,1,1,2
 classify-client.services.mozilla.com:HSTS	0	18627	1640979850823,1,0,2
-token.services.mozilla.com:HSTS	5	18633	1641430229939,1,0,2
+token.services.mozilla.com:HSTS	5	18633	1641433431334,1,0,2
 unix.stackexchange.com:HSTS	0	18629	1625129723862,1,0,2
 m.facebook.com:HSTS	3	18630	1625196246917,1,1,2
 use.typekit.net:HSTS	0	18628	1641027132113,1,1,2
@@ -10,14 +10,14 @@ webextensions.settings.services.mozilla.com:HSTS	0	18628	1641001750949,1,0,2
 external.xx.fbcdn.net:HSTS	1	18633	1641430245686,1,1,2
 raw.githubusercontent.com:HSTS	0	18632	1641352617997,1,0,2
 vesta-1.web.telegram.org:HSTS	0	18628	1645272449927,1,0,2
-firefox.settings.services.mozilla.com:HSTS	5	18633	1641432682486,1,0,2
+firefox.settings.services.mozilla.com:HSTS	5	18633	1641433297229,1,0,2
 location.services.mozilla.com:HSTS	2	18633	1641430216223,1,1,2
 www.googletagmanager.com:HSTS	0	18628	1641027133383,1,1,2
 www.reddit.com:HSTS	0	18628	1625012772631,1,1,2
 www.messenger.com:HSTS	0	18628	1625017739694,1,1,2
 t.me:HSTS	1	18632	1645583062894,1,0,2
 pixel.facebook.com:HSTS	0	18628	1625018131193,1,0,2
-www.facebook.com:HSTS	3	18633	1625449099772,1,0,2
+www.facebook.com:HSTS	3	18633	1625449703983,1,0,2
 notifications.bitwarden.com:HSTS	2	18630	1641180360882,1,1,2
 icons.bitwarden.net:HSTS	2	18630	1641180372688,1,1,2
 external.fmnl13-2.fna.fbcdn.net:HSTS	1	18632	1641359855888,1,1,2
@@ -50,7 +50,7 @@ services.addons.mozilla.org:HSTS	3	18632	1641351168152,1,0,2
 vault.bitwarden.com:HSTS	1	18630	1641180360152,1,1,2
 cdn.statically.io:HSTS	0	18632	1641351772808,1,1,2
 twitter.com:HSTS	0	18628	2240629737221,1,0,2
-incoming.telemetry.mozilla.org:HSTS	1	18633	1625662274478,1,0,2
+incoming.telemetry.mozilla.org:HSTS	1	18633	1625665818021,1,0,2
 api.bitwarden.com:HSTS	0	18627	1640981580082,1,1,2
 pgl.yoyo.org:HSTS	0	18632	1625584739538,1,0,2
 external.fmnl4-1.fna.fbcdn.net:HSTS	0	18629	1641087534030,1,1,2
@@ -59,7 +59,7 @@ mobile.twitter.com:HSTS	0	18628	2240629740158,1,0,2
 normandy.cdn.mozilla.net:HSTS	0	18627	1640979849859,1,0,2
 facebook.com:HSTS	4	18632	1625367142158,1,1,2
 telegram.org:HSTS	2	18632	1641040478499,1,1,2
-profile.accounts.firefox.com:HSTS	5	18633	1641432830188,1,1,2
+profile.accounts.firefox.com:HSTS	5	18633	1641433431346,1,1,2
 addons.cdn.mozilla.net:HSTS	2	18632	1641351169151,1,1,2
 flora-1.web.telegram.org:HSTS	0	18628	1645272336944,1,0,2
 telegram.me:HSTS	1	18632	1645583063137,1,0,2
