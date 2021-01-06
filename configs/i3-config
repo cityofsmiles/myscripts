@@ -440,7 +440,8 @@ bindsym $super+n exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs
 bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
 bindsym $super+t exec --no-startup-id telegram-desktop
 bindsym $super+p exec --no-startup-id pamac-manager
-bindsym $super+f exec --no-startup-id firefox
+bindsym $super+f exec --no-startup-id firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/personal" www.facebook.com/
+bindsym $super+Control+f exec --no-startup-id firefox -profile "/home/jonathan/Documents/myscripts/firefox-profiles/work" www.facebook.com/
 bindsym $super+g exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
