@@ -1,0 +1,7 @@
+myscripts/firefox-profiles/.git/*
+grade8-repository/master/.git/*
+grade8-repository/assets/Grade8Lessons/.git/*
+grade8-repository/calendar/Grade8Lessons/.git/*
+myscripts/python-scripts/ExamAutoChecker/.git/*
+myscripts/python-scripts/ExamAutoCheckerAssets/ExamAutoChecker/.git/*
+myscripts/.git/*
