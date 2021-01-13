@@ -152,6 +152,7 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+#set $ws9 9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -188,6 +189,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+#assign [class="firefox -profile '/home/jonathan/.mozilla/profiles/personal' www.facebook.com/"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -286,7 +288,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 #exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 60 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
