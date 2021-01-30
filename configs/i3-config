@@ -445,7 +445,7 @@ bindsym $super+w exec --no-startup-id brave
 bindsym $super+n exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/txt/notes
 bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
 bindsym $super+t exec --no-startup-id telegram-desktop
-bindsym $super+p exec --no-startup-id pamac-manager
+bindsym $super+p exec --no-startup-id pidgin
 bindsym $super+f exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/personal" https://www.facebook.com/messages
 bindsym $super+Control+f exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages
 bindsym $super+Shift+e exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3504663389565242
@@ -459,12 +459,12 @@ bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/P
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
 bindsym $super+v exec --no-startup-id terminal -e ranger /home/jonathan/Downloads
 bindsym $super+m exec --no-startup-id mousepad
-bindsym $super+l exec --no-startup-id libreoffice
+bindsym $super+l exec --no-startup-id urxvt -e sh -c "cal && sleep 10"
+bindsym $super+Control+l exec --no-startup-id urxvt -e sh -c "cal -3 && sleep 10"
 bindsym $super+r exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
 
 
 # Launch personal startup apps
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
@@ -474,6 +474,7 @@ exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/docs2pine.s
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/latex2pine.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/excel2pine.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/notes2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
-#exec --no-startup-id
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/recurrent-gdrive-backup.sh
+exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
+exec --no-startup-id /usr/bin/pidgin
 
