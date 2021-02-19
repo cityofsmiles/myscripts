@@ -1,10 +1,13 @@
 #!/usr/bin/bash
 
-sudo parted /dev/sdb --script -- mklabel gpt
+device="$1"
+devicefirstpartition="$2"
 
-sudo parted /dev/sdb --script -- mkpart primary ext4 0% 100%
+sudo parted /dev/$device --script -- mklabel gpt
 
-sudo mkfs.ext4 -F /dev/sdb1
+sudo parted /dev/$device --script -- mkpart primary ext4 0% 100%
 
-sudo parted /dev/sdb --script print
+sudo mkfs.ext4 -F /dev/$devicefirstpartition
+
+sudo parted /dev/$device --script print
 

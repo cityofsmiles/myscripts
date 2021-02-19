@@ -47,7 +47,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+bindsym $mod+Control+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -193,7 +193,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
-#assign [class="firefox -profile '/home/jonathan/.mozilla/profiles/personal' www.facebook.com/"] $ws8
+assign [class="Pidgin"] $ws9
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -429,20 +429,21 @@ mode "$mode_gaps_outer" {
 
 
 # My personal shortcuts
-bindsym $super+c exec --no-startup-id terminal
+bindsym $super+c exec --no-startup-id simplescreenrecorder  
+bindsym $super+space exec --no-startup-id xfce4-terminal --zoom=3
 bindsym $super+o exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh
 bindsym $super+Control+o exec --no-startup-id poweroff
 bindsym $super+Control+r exec --no-startup-id reboot
-bindsym $super+s exec --no-startup-id terminal -e ranger /home/jonathan/Documents/myscripts
-bindsym $super+h exec --no-startup-id terminal -e ranger /home/jonathan
-bindsym $super+d exec --no-startup-id terminal -e ranger /home/jonathan/Documents
+bindsym $super+s exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents/myscripts'
+bindsym $super+h exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
+bindsym $super+d exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents'
 bindsym $super+Control+b exec --no-startup-id mousepad /home/jonathan/.i3/config
-bindsym $super+x exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/latex/20-21
-bindsym $super+e exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/excel/shs/20-21
+bindsym $super+x exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'
+bindsym $super+e exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'
 bindsym $super+b exec --no-startup-id mousepad /home/jonathan/.bashrc
 bindsym $super+Control+w exec --no-startup-id chromium
 bindsym $super+w exec --no-startup-id brave
-bindsym $super+n exec --no-startup-id terminal -e ranger /home/jonathan/Old-Docs/txt/notes
+bindsym $super+n exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'
 bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
 bindsym $super+t exec --no-startup-id telegram-desktop
 bindsym $super+p exec --no-startup-id pidgin
@@ -457,8 +458,9 @@ bindsym $super+Shift+m exec --no-startup-id firefox -profile "/home/jonathan/.mo
 bindsym $super+g exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
-bindsym $super+v exec --no-startup-id terminal -e ranger /home/jonathan/Downloads
+bindsym $super+v exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Downloads'
 bindsym $super+m exec --no-startup-id mousepad
+bindsym $super+k exec --no-startup-id kdenlive 
 bindsym $super+l exec --no-startup-id urxvt -e sh -c "cal && sleep 10"
 bindsym $super+Control+l exec --no-startup-id urxvt -e sh -c "cal -3 && sleep 10"
 bindsym $super+r exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
@@ -476,5 +478,5 @@ exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/excel2pine.
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/notes2pine.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/recurrent-gdrive-backup.sh
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
-exec --no-startup-id /usr/bin/pidgin
+#exec --no-startup-id /usr/bin/pidgin
 
