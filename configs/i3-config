@@ -441,8 +441,8 @@ bindsym $super+Control+b exec --no-startup-id mousepad /home/jonathan/.i3/config
 bindsym $super+x exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'
 bindsym $super+e exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'
 bindsym $super+b exec --no-startup-id mousepad /home/jonathan/.bashrc
-bindsym $super+Control+w exec --no-startup-id chromium
-bindsym $super+w exec --no-startup-id brave
+bindsym $super+Control+w exec --no-startup-id brave
+bindsym $super+w exec --no-startup-id /opt/appimages/ungoogled-chromium-87.0.4280.141.AppImage 
 bindsym $super+n exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'
 bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
 bindsym $super+t exec --no-startup-id telegram-desktop
@@ -461,8 +461,8 @@ bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jo
 bindsym $super+v exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Downloads'
 bindsym $super+m exec --no-startup-id mousepad
 bindsym $super+k exec --no-startup-id kdenlive 
-bindsym $super+l exec --no-startup-id urxvt -e sh -c "cal && sleep 10"
-bindsym $super+Control+l exec --no-startup-id urxvt -e sh -c "cal -3 && sleep 10"
+bindsym $super+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal && sleep 10"
+bindsym $super+Control+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal -3 && sleep 10"
 bindsym $super+r exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
 
 
