@@ -37,7 +37,7 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+w kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec --no-startup-id env LC_ALL=en_US.UTF-8 dmenu_recency
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
