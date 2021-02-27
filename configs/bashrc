@@ -170,6 +170,7 @@ alias r='ranger'
 alias m='mousepad'
 alias format-usb='sh /home/jonathan/Documents/myscripts/bash-scripts/format-usb.sh'
 alias cleanzip='unzip "*.zip" && rm *.zip'
+alias la='ls -a'
 
 
 export EDITOR=mousepad
