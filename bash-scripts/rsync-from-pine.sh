@@ -1,0 +1,1 @@
+rsync -av alarm@192.168.1.247:/home/alarm/Documents/latex/20-21/worksheets/3rd-grading/quiz-triangle-congruence/q2.zip /home/jonathan/Documents/ 

@@ -171,7 +171,9 @@ alias m='mousepad'
 alias format-usb='sh /home/jonathan/Documents/myscripts/bash-scripts/format-usb.sh'
 alias cleanzip='unzip "*.zip" && rm *.zip'
 alias la='ls -a'
-
+alias ll='exa'
+alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-commit-push.sh'
+alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 
 export EDITOR=mousepad
 
@@ -192,5 +194,5 @@ up(){
   cd $d
 }
 
-
+export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH 
 
