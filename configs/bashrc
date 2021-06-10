@@ -161,7 +161,7 @@ alias gacpa='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-p
 alias gpm='git push -u origin master'
 alias gpa='git push -u origin assets'
 alias gpc='git push -u origin calendar'
-alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
+#alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
 alias cl='sudo yay -Yc'
 alias gpmn='git push -u origin main'
 alias cpcn='sh /home/jonathan/Documents/myscripts/bash-scripts/cp-configs.sh'
@@ -174,6 +174,7 @@ alias la='ls -a'
 alias ll='exa'
 alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-commit-push.sh'
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
+alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
 
 export EDITOR=mousepad
 

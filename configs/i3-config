@@ -40,7 +40,7 @@ bindsym $mod+Shift+w kill
 bindsym $mod+d exec --no-startup-id env LC_ALL=en_US.UTF-8 dmenu_recency
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id env LC_ALL=en_US.UTF-8 morc_menu
+#bindsym $mod+z exec --no-startup-id env LC_ALL=en_US.UTF-8 morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -72,7 +72,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Shift+x --release exec --no-startup-id xkill
+#bindsym $mod+Shift+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -456,7 +456,7 @@ bindsym $super+Shift+g exec --no-startup-id firefox -profile "/home/jonathan/.mo
 bindsym $super+Shift+h exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3381977691859587
 bindsym $super+Shift+k exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3006767602784080
 bindsym $super+Shift+m exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3191614184254727
-bindsym $super+g exec --no-startup-id notify-send "Gromit-MPX is active." && notify-send "Hotkey:F9  Undo:F8" && flatpak run net.christianbeier.Gromit-MPX 
+bindsym $super+g exec --no-startup-id notify-send "Gromit-MPX is active." && notify-send "Hotkey:Alt+x  Undo:Alt+z" && gromit-mpx
 #bindsym $super+g exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
@@ -466,7 +466,12 @@ bindsym $super+k exec --no-startup-id kdenlive
 bindsym $super+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal && sleep 10"
 bindsym $super+Control+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal -3 && sleep 10"
 bindsym $super+r exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
-
+bindsym $mod+x exec --no-startup-id gromit-mpx --toggle
+bindsym $mod+Shift+x exec --no-startup-id gromit-mpx --visibility
+bindsym $mod+Control+x exec --no-startup-id gromit-mpx --quit
+bindsym $mod+z exec --no-startup-id gromit-mpx --undo
+bindsym $mod+Shift+z exec --no-startup-id gromit-mpx --redo
+bindsym $mod+Control+z exec --no-startup-id gromit-mpx --clear
 
 # Launch personal startup apps
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
