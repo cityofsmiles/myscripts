@@ -457,7 +457,8 @@ bindsym $super+Shift+h exec --no-startup-id firefox -profile "/home/jonathan/.mo
 bindsym $super+Shift+k exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3006767602784080
 bindsym $super+Shift+m exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3191614184254727
 bindsym $super+g exec --no-startup-id notify-send "Gromit-MPX is active." && notify-send "Hotkey:Alt+x  Undo:Alt+z" && gromit-mpx
-#bindsym $super+g exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/backup-all-2gdrive.sh
+bindsym $super+a exec --no-startup-id /home/jonathan/texpander-master/texpander.sh
+bindsym $super+Control+a exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-texpander-entry.sh
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
 bindsym $super+v exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Downloads'
@@ -465,13 +466,14 @@ bindsym $super+m exec --no-startup-id mousepad
 bindsym $super+k exec --no-startup-id kdenlive 
 bindsym $super+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal && sleep 10"
 bindsym $super+Control+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal -3 && sleep 10"
-bindsym $super+r exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
+bindsym $super+Shift+Control+b exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
 bindsym $mod+x exec --no-startup-id gromit-mpx --toggle
 bindsym $mod+Shift+x exec --no-startup-id gromit-mpx --visibility
 bindsym $mod+Control+x exec --no-startup-id gromit-mpx --quit
 bindsym $mod+z exec --no-startup-id gromit-mpx --undo
 bindsym $mod+Shift+z exec --no-startup-id gromit-mpx --redo
 bindsym $mod+Control+z exec --no-startup-id gromit-mpx --clear
+bindsym $super+r exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/croc-receive.sh
 
 # Launch personal startup apps
 exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
