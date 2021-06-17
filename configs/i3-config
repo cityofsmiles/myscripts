@@ -193,7 +193,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
+assign [class="Google Chrome"] $ws2
 assign [class="Pidgin"] $ws9
 
 # Open specific applications in floating mode
@@ -431,6 +431,7 @@ mode "$mode_gaps_outer" {
 
 # My personal shortcuts
 bindsym $super+c exec --no-startup-id simplescreenrecorder  
+bindsym $super+Control+c exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh
 bindsym $super+space exec --no-startup-id xfce4-terminal --zoom=3
 bindsym $super+o exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh
 bindsym $super+Control+o exec --no-startup-id poweroff
@@ -438,10 +439,10 @@ bindsym $super+Control+r exec --no-startup-id reboot
 bindsym $super+s exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents/myscripts'
 bindsym $super+h exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
 bindsym $super+d exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents'
-bindsym $super+Control+b exec --no-startup-id mousepad /home/jonathan/.i3/config
+bindsym $super+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/i3-config'
 bindsym $super+x exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'
 bindsym $super+e exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'
-bindsym $super+b exec --no-startup-id mousepad /home/jonathan/.bashrc
+bindsym $super+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/bashrc'
 bindsym $super+Control+w exec --no-startup-id brave
 bindsym $super+w exec --no-startup-id firefox
 bindsym $super+n exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'
@@ -462,11 +463,11 @@ bindsym $super+Control+a exec --no-startup-id /home/jonathan/Documents/myscripts
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
 bindsym $super+v exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Downloads'
-bindsym $super+m exec --no-startup-id mousepad
+bindsym $super+m exec --no-startup-id xfce4-terminal --zoom=3 --command='micro'
 bindsym $super+k exec --no-startup-id kdenlive 
 bindsym $super+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal && sleep 10"
 bindsym $super+Control+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal -3 && sleep 10"
-bindsym $super+Shift+Control+b exec --no-startup-id mousepad /home/jonathan/.config/ranger/rc.conf
+bindsym $super+Shift+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/rc.conf'
 bindsym $mod+x exec --no-startup-id gromit-mpx --toggle
 bindsym $mod+Shift+x exec --no-startup-id gromit-mpx --visibility
 bindsym $mod+Control+x exec --no-startup-id gromit-mpx --quit

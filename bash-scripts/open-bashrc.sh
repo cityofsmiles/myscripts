@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mousepad ~/.bashrc
+mousepad /home/jonathan/Documents/myscripts/configs/bashrc

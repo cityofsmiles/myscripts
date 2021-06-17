@@ -175,8 +175,9 @@ alias ll='exa'
 alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-commit-push.sh'
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
+alias sshpine='ssh alarm@192.168.1.247'
 
-export EDITOR=mousepad
+export EDITOR=micro
 
 shopt -s extglob
 
