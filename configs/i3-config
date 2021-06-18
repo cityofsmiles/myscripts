@@ -438,7 +438,7 @@ bindsym $super+Control+o exec --no-startup-id poweroff
 bindsym $super+Control+r exec --no-startup-id reboot
 bindsym $super+s exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents/myscripts'
 bindsym $super+h exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
-bindsym $super+d exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents'
+bindsym $super+d exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
 bindsym $super+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/i3-config'
 bindsym $super+x exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'
 bindsym $super+e exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'

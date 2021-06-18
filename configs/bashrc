@@ -167,7 +167,8 @@ alias gpmn='git push -u origin main'
 alias cpcn='sh /home/jonathan/Documents/myscripts/bash-scripts/cp-configs.sh'
 alias gcal='python /home/jonathan/gencal/calculators/gen_cal_v2/gen_cal_v2.py'
 alias r='ranger'
-alias m='mousepad'
+alias m='micro'
+alias sm='sudo micro'
 alias format-usb='sh /home/jonathan/Documents/myscripts/bash-scripts/format-usb.sh'
 alias cleanzip='unzip "*.zip" && rm *.zip'
 alias la='ls -a'
@@ -176,6 +177,7 @@ alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-c
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
 alias sshpine='ssh alarm@192.168.1.247'
+
 
 export EDITOR=micro
 

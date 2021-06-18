@@ -2,7 +2,5 @@
 
 cd /home/jonathan/.texpander
 
-touch entry
-
-mousepad entry
+xfce4-terminal --zoom=3 --command='micro'
 
