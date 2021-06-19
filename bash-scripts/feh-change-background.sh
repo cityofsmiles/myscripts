@@ -2,7 +2,7 @@
 #img=(`find /home/jonathan/Documents/wallpapers -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image' | cut -d':' -f1`)
 #wallpapers='/home/jonathan/Documents/wallpapers'
 
-sleep 2m
+sleep 10s
 
 while true
 do
