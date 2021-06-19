@@ -13,3 +13,5 @@ cp -u /home/jonathan/Documents/myscripts/configs/Xmodmap /home/jonathan/.Xmodmap
 cp -u /home/jonathan/Documents/myscripts/configs/rc.conf /home/jonathan/.config/ranger/rc.conf;
 
 cp -u /home/jonathan/Documents/myscripts/configs/profile /home/jonathan/.profile;
+
+sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
