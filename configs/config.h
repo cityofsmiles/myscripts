@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Ranger",   NULL,       NULL,       0,            0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Pidgin",   NULL,       NULL,       9,            0,           -1 },
+	{ "Pidgin",   NULL,       NULL,       8,            0,           -1 },
 };
 
 /* layout(s) */
@@ -133,7 +133,7 @@ static Key keys[] = {
 	{ Mod4Mask,                     XK_x,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'") },
 	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'") },
 	{ Mod4Mask,                     XK_b,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/bashrc'") },
-	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("brave") },
+	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("nyxt") },
 	{ Mod4Mask,                     XK_w,      spawn,          SHCMD("firefox") },
 	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'") },
 	{ Mod4Mask|ControlMask,         XK_n,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh") },
@@ -146,6 +146,7 @@ static Key keys[] = {
 	{ Mod4Mask,                     XK_z,      spawn,          SHCMD("xfce4-screenshooter -f -s /home/jonathan/Pictures") },
 	{ Mod4Mask|ControlMask,         XK_z,      spawn,          SHCMD("xfce4-screenshooter -r -s /home/jonathan/Pictures") },
 	{ Mod4Mask,                     XK_m,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro'") },
+	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='yay'") },
 	{ Mod4Mask,                     XK_k,      spawn,          SHCMD("kdenlive") },
 	{ Mod4Mask|ShiftMask|ControlMask,     XK_b,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/rc.conf'") },
 	{ Mod4Mask,                     XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/gromit-mpx.sh") },

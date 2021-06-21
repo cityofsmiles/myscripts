@@ -2,7 +2,7 @@
 xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21/flashcards /home/jonathan/Old-Docs/latex/20-21/beamer-presentations/lessons/4th-grading' &
 google-chrome-stable https://meet.google.com/rfs-egcq-ogw &
 gromit-mpx &
-brave https://github.com/cityofsmiles/Grade8Lessons https://github.com/cityofsmiles/Grade8Lessons/tree/calendar https://raw.githubusercontent.com/cityofsmiles/Grade8Lessons/assets/calendar/jun-2021-0.jpeg & 
+firefox https://github.com/cityofsmiles/Grade8Lessons https://github.com/cityofsmiles/Grade8Lessons/tree/calendar https://raw.githubusercontent.com/cityofsmiles/Grade8Lessons/assets/calendar/jun-2021-0.jpeg & 
 simplescreenrecorder &
 
 records="/home/jonathan/Old-Docs/excel/shs/20-21/Class-Records"

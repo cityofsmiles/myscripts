@@ -15,3 +15,5 @@ cp -u /home/jonathan/Documents/myscripts/configs/rc.conf /home/jonathan/.config/
 cp -u /home/jonathan/Documents/myscripts/configs/profile /home/jonathan/.profile;
 
 sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
+
+cp -u /home/jonathan/Documents/myscripts/configs/xprofile /home/jonathan/.xprofile;

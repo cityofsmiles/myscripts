@@ -1,0 +1,11 @@
+xset -b
+
+# Statusbar loop
+while true; do
+   xsetroot -name "$( if [ $( pgrep gromit-mpx ) ]; then echo G; fi ) | $( ip route get 1.1.1.1 | awk '{print $7}' ) | V: $(awk '/%/ {gsub(/[\[\]]/,""); print $4}' <(amixer sget Master)) | B: $( cat /sys/class/power_supply/BAT0/capacity )% | $( date +"%A, %b %d,%l:%M %p" )"
+   sleep 10s  
+done &
+
+
+# Autostart script
+sh /home/jonathan/Documents/myscripts/bash-scripts/autostart-scripts.sh &
