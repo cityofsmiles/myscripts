@@ -178,6 +178,7 @@ alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
 alias sshpine='ssh alarm@192.168.1.247'
 alias compile='cd /home/jonathan/dwm; sudo make clean install'
+alias cdh='cd ~'
 
 export VISUAL=micro
 export EDITOR=micro
@@ -203,5 +204,7 @@ export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH
 
 export RANGER_LOAD_DEFAULT_RC=false
 
-#export TERM=/usr/bin/xfce4-terminal 
-#export TERMCMD=/usr/bin/xfce4-terminal 
+cdl(){
+	cd $1
+	ls
+}
