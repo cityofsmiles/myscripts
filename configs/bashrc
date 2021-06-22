@@ -201,3 +201,4 @@ up(){
 
 export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH 
 
+export RANGER_LOAD_DEFAULT_RC=false
