@@ -202,3 +202,6 @@ up(){
 export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH 
 
 export RANGER_LOAD_DEFAULT_RC=false
+
+#export TERM=/usr/bin/xfce4-terminal 
+#export TERMCMD=/usr/bin/xfce4-terminal 
