@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int snap      = 20;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
@@ -10,8 +10,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=16" };
+static const char dmenufont[]       = "monospace:size=16";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -41,7 +41,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -120,35 +120,36 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ Mod4Mask,                     XK_space,  spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3") },
-	{ Mod4Mask,                     XK_c,      spawn,          SHCMD("simplescreenrecorder") },
-	{ Mod4Mask|ControlMask,         XK_c,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh") },
-	{ Mod4Mask,                     XK_o,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh") },
-	{ Mod4Mask|ControlMask,         XK_o,      spawn,          SHCMD("poweroff") },
-	{ Mod4Mask|ControlMask,         XK_r,      spawn,          SHCMD("reboot") },
-	{ Mod4Mask|ShiftMask|ControlMask,  XK_r,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='sudo systemctl restart display-manager'") },
-	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Documents/myscripts'") },
-	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan'") },
-	{ Mod4Mask|ControlMask,         XK_b,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/config.h'") },
-	{ Mod4Mask,                     XK_x,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'") },
-	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'") },
-	{ Mod4Mask,                     XK_b,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/bashrc'") },
-	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("nyxt") },
+	{ Mod4Mask,                     XK_x,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4") },
+	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("simplescreenrecorder") },
+	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh") },
+	{ Mod4Mask|ControlMask,         XK_l,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='sh /home/jonathan/Documents/myscripts/bash-scripts/calendar.sh 1'") },
+	{ Mod4Mask|ShiftMask,           XK_l,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='sh /home/jonathan/Documents/myscripts/bash-scripts/calendar.sh 2'") },
+	{ Mod4Mask,                     XK_q,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh") },
+	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("poweroff") },
+	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },
+	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='sudo systemctl restart display-manager'") },
+	{ Mod4Mask|ControlMask,         XK_z,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='ranger /home/jonathan/Documents/myscripts'") },
+	{ Mod4Mask|ShiftMask,           XK_z,      spawn,          SHCMD("pcmanfm") },
+	{ Mod4Mask,                     XK_c,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='micro /home/jonathan/Documents/myscripts/configs/config.h'") },
+	{ Mod4Mask,                     XK_z,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='ranger /home/jonathan'") },
+/*	{ Mod4Mask,                     XK_z,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='ranger /home/jonathan/Old-Docs/latex/20-21'") },*/
+	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'") },
+	{ Mod4Mask|ControlMask,         XK_c,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='micro /home/jonathan/Documents/myscripts/configs/bashrc'") },
 	{ Mod4Mask,                     XK_w,      spawn,          SHCMD("firefox") },
-	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'") },
+	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='ranger /home/jonathan/Old-Docs/txt/notes'") },
 	{ Mod4Mask|ControlMask,         XK_n,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh") },
 	{ Mod4Mask,                     XK_t,      spawn,          SHCMD("telegram-desktop") },
-	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("pidgin") },
-	{ Mod4Mask,                     XK_f,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/personal' https://www.facebook.com/messages") },
-	{ Mod4Mask|ControlMask,         XK_f,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/work' https://www.facebook.com/messages") },
+	{ Mod4Mask|ControlMask,         XK_t,      spawn,          SHCMD("pidgin") },
+	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/personal'") },
+	{ Mod4Mask|ShiftMask,	        XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/work' https://www.facebook.com/messages") },
 	{ Mod4Mask,                     XK_a,      spawn,          SHCMD("sh /home/jonathan/texpander-master/texpander.sh") },
 	{ Mod4Mask|ControlMask,         XK_a,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/new-texpander-entry.sh") },
-	{ Mod4Mask,                     XK_z,      spawn,          SHCMD("xfce4-screenshooter -f -s /home/jonathan/Pictures") },
-	{ Mod4Mask|ControlMask,         XK_z,      spawn,          SHCMD("xfce4-screenshooter -r -s /home/jonathan/Pictures") },
-	{ Mod4Mask,                     XK_m,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro'") },
-	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='yay'") },
-	{ Mod4Mask,                     XK_k,      spawn,          SHCMD("kdenlive") },
-	{ Mod4Mask|ShiftMask|ControlMask,     XK_b,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/rc.conf'") },
+	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("xfce4-screenshooter -f -s /home/jonathan/Pictures") },
+	{ Mod4Mask|ControlMask,         XK_p,      spawn,          SHCMD("xfce4-screenshooter -r -s /home/jonathan/Pictures") },
+	{ Mod4Mask,                     XK_m,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='micro'") },
+	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='yay'") },
+	{ Mod4Mask|ShiftMask,           XK_c,      spawn,          SHCMD("xfce4-terminal --hide-menubar --zoom=4 --command='micro /home/jonathan/Documents/myscripts/configs/rc.conf'") },
 	{ Mod4Mask,                     XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/gromit-mpx.sh") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bin/dmenu_run_history") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("gromit-mpx --toggle") },
@@ -157,7 +158,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      spawn,          SHCMD("gromit-mpx --undo") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("gromit-mpx --redo") },
 	{ MODKEY|ControlMask,           XK_z,      spawn,          SHCMD("gromit-mpx --clear") },
-	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/croc-receive.sh") },
+	{ Mod4Mask|ShiftMask,           XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/croc-receive.sh") },
 	
 };
 

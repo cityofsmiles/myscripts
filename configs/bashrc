@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
 #
-
+   
 [[ $- != *i* ]] && return
 
 colors() {
@@ -144,7 +144,7 @@ alias u='yay'
 #alias u='yay; flatpak update'
 alias srb='source ~/.bashrc'
 alias in='yay -S'
-alias pr='yay -R'
+alias pr='yay -Rsn'
 alias sound='alsamixer'
 alias bright='xrandr --output LVDS-1 --brightness'
 alias sr='yay -Ss'
@@ -154,15 +154,15 @@ alias wifion='nmcli radio wifi on'
 alias pdf2jpg='sh /home/jonathan/Documents/myscripts/bash-scripts/pdf2jpg.sh'
 alias gaa='git add --all'
 alias gcm='git commit -m'
-alias gacpams='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-assets-master.sh'
-alias gacpmn='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-main.sh'
-alias gacpms='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-master.sh'
+alias gacpam='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-assets-main.sh'
+alias gacpm='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-main.sh'
+#alias gacpms='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-master.sh'
 alias gacpa='sh /home/jonathan/Documents/myscripts/bash-scripts/git-add-commit-push-assets.sh'
 alias gpm='git push -u origin master'
 alias gpa='git push -u origin assets'
 alias gpc='git push -u origin calendar'
 #alias gromit-mpx='/home/jonathan/gromit-mpx-1.3.1/build/gromit-mpx'
-alias cl='sudo yay -Yc'
+alias cl='sudo pacman -Scc; rm -rf ~/.cache/*; sudo pacman -R $(pacman -Qdtq)'
 alias gpmn='git push -u origin main'
 alias cpcn='sh /home/jonathan/Documents/myscripts/bash-scripts/cp-configs.sh'
 alias gcal='python /home/jonathan/gencal/calculators/gen_cal_v2/gen_cal_v2.py'
@@ -177,8 +177,18 @@ alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-c
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
 alias sshpine='ssh alarm@192.168.1.247'
-alias compile='cd /home/jonathan/dwm; sudo make clean install'
+alias compile='sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
+cd /home/jonathan/dwm; sudo make clean install'
 alias cdh='cd ~'
+alias mb='micro ~/Documents/phone/configs/bashrc && cp ~/Documents/phone/configs/bashrc ~/.bashrc && source ~/.bashrc'
+alias rb='reboot'
+alias po='poweroff'
+alias mc='micro ~/Documents/phone/configs/config.h'
+alias mr='micro ~/Documents/phone/configs/rc.conf && cp ~/Documents/phone/configs/rc.conf ~/.config/ranger/rc.conf'
+alias launchclass='sh /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh'
+alias scan='sh /home/jonathan/Documents/myscripts/bash-scripts/scanimage.sh'
+alias xl2jpg='sh /home/jonathan/Documents/myscripts/bash-scripts/xl2jpg.sh'
+alias vnc='x11vnc -display :0 -usepw'
 
 export VISUAL=micro
 export EDITOR=micro

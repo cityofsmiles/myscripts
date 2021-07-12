@@ -1,15 +1,28 @@
 #!/usr/bin/bash
 
-in="$1"
+outdir="converted"
 
-out="${in%.*}"
+if [ -d $outdir ];then
+    echo "Output folder exists."
+else
+    mkdir $outdir
+fi
 
-soffice --headless --convert-to pdf --outdir "converted" $in
+#in="$1"
+#files="$(ls *.xlsx)"
 
-cd ./converted
+for file in *.xlsx;
+do
+  out="${file%.*}";
+  #echo $out;
+  soffice --headless --convert-to pdf:calc_pdf_Export --outdir $outdir "$file"
+  cd $outdir
+  vips copy "$out".pdf[dpi=600,page=0,n=-1] "$out".jpeg
+  rm "$out".pdf
+  cd ..
+done
+#
 
-vips copy $out.pdf[dpi=600,page=0,n=-1] $out.jpeg
-
-rm $out.pdf
-
+#
+#echo $in
 echo "Done!"

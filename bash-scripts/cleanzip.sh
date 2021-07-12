@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 
-unzip "*.zip" && rm *.zip
+unzip "*.zip"
+rm *.zip

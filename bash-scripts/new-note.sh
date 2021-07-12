@@ -2,5 +2,5 @@
 
 cd /home/jonathan/Old-Docs/txt/notes/
 
-xfce4-terminal --zoom=3 --command='micro note.txt'
+xfce4-terminal --zoom=3 --command='micro'
 

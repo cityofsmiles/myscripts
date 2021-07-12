@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
-in="$1"
+
+in="$( ls *.pdf )"
 #out="$2"
 out="${in%.*}"
 

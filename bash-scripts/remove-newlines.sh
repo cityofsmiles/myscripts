@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
-in=/home/jonathan/Documents/notes/remove-newlines.txt
-out=/home/jonathan/Documents/notes/remove-newlines-out.txt
+in=remove-newlines.txt
+out=remove-newlines-out.txt
 
 cp $in $out
 
