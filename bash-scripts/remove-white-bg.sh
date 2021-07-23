@@ -1,10 +1,10 @@
 #!/usr/bin/sh
 
 input="$1"
-output="$input-out"
+output="$1.png"
 
 convert $input -transparent white $output
 
-rm $input
+#rm $input
 
-mv $output $input
+#mv $output $input

@@ -140,7 +140,7 @@ extract ()
 
 
 # My personal shortcuts 
-alias u='yay'
+alias u='yay -Syu --noconfirm; cd /home/jonathan/dwm; git pull https://git.suckless.org/dwm/; cd ~'
 #alias u='yay; flatpak update'
 alias srb='source ~/.bashrc'
 alias in='yay -S'
@@ -177,7 +177,7 @@ alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-c
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
 alias sshpine='ssh alarm@192.168.1.247'
-alias compile='sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
+alias cdwm='sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
 cd /home/jonathan/dwm; sudo make clean install'
 alias cdh='cd ~'
 alias mb='micro ~/Documents/phone/configs/bashrc && cp ~/Documents/phone/configs/bashrc ~/.bashrc && source ~/.bashrc'
@@ -190,8 +190,9 @@ alias scan='sh /home/jonathan/Documents/myscripts/bash-scripts/scanimage.sh'
 alias xl2jpg='sh /home/jonathan/Documents/myscripts/bash-scripts/xl2jpg.sh'
 alias vnc='x11vnc -display :0 -usepw'
 
-export VISUAL=micro
+export VISUAL=mousepad
 export EDITOR=micro
+export PAGER=less
 
 shopt -s extglob
 
@@ -213,6 +214,9 @@ up(){
 export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH 
 
 export RANGER_LOAD_DEFAULT_RC=false
+
+unset SESSION_MANAGER
+#export SESSION_MANAGER=/usr/bin/lightdm
 
 cdl(){
 	cd $1
