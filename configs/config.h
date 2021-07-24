@@ -22,10 +22,10 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "60x15", NULL };
-/*const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd1[] = {"urxvt", "-name", "spterm", "-geometry", "80x20", NULL };
+/*const char *spcmd1[] = {"st", "-n", "spterm", "-g", "60x15", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };*/
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "60x15", "-e", "ranger", NULL };
+const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };
 /*const char *spcmd3[] = {"keepassxc", NULL };*/
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -156,7 +156,7 @@ static Key keys[] = {
 	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/personal'") },
 	{ Mod4Mask|ShiftMask,	        XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/work' https://www.facebook.com/messages") },
 	{ Mod4Mask,              	XK_x,  	   togglescratch,  {.ui = 0 } },
-	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("st") },
+	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("urxvt") },
 	{ Mod4Mask|ShiftMask,           XK_x,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("st -e sudo systemctl restart display-manager") },
 	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },

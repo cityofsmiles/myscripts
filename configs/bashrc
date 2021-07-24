@@ -215,8 +215,8 @@ export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH
 
 export RANGER_LOAD_DEFAULT_RC=false
 
-unset SESSION_MANAGER
-#export SESSION_MANAGER=/usr/bin/lightdm
+#unset SESSION_MANAGER
+export SESSION_MANAGER=/usr/bin/lightdm
 
 cdl(){
 	cd $1
