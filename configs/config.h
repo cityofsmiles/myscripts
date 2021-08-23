@@ -45,7 +45,7 @@ static const Rule rules[] = {
 	{ "Gimp",	NULL,	   NULL,       0,	     1,		  -1 },
 	{ "telegram-desktop",NULL, NULL,       1 << 4,       0,           -1 },
 	{ "Google-chrome", NULL,   NULL,       1 << 3,       0,           -1 },
-	{ "Pidgin",      NULL,     NULL,       1 << 5,       0,           -1 },
+	{ "Pidgin",     NULL,      NULL,       1 << 5,       0,           -1 },
 	{ "SimpleScreenRecorder",  NULL,       NULL,         1 << 4,       0,           -1 },
 	{ NULL,	       "spterm",   NULL,       SPTAG(0),     1,		  -1 },
 	{ NULL,	       "spfm",	   NULL,       SPTAG(1),     1,		  -1 },
@@ -133,10 +133,6 @@ static Key keys[] = {
 	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/common-scripts/calendar.sh 1") },
 	{ Mod4Mask|ControlMask,         XK_d,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/common-scripts/calendar.sh 2") },
 	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("st -e ranger /home/jonathan/Old-Docs/excel/shs/20-21") },
-	{ Mod4Mask,              	XK_f,  	   togglescratch,  {.ui = 1 } },
-	{ Mod4Mask|ControlMask,         XK_f,      spawn,          SHCMD("st -e ranger /home/jonathan") },
-	{ Mod4Mask|ShiftMask,           XK_f,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/myscripts") },
-	{ MODKEY|Mod4Mask,              XK_f,      spawn,          SHCMD("pcmanfm") },
 	{ Mod4Mask,                     XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/gromit-mpx.sh") },
 	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh") },
 	{ Mod4Mask,                     XK_m,      spawn,          SHCMD("mousepad") },
@@ -160,7 +156,10 @@ static Key keys[] = {
 	{ Mod4Mask|ShiftMask,           XK_x,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("st -e sudo systemctl restart display-manager") },
 	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },
-	{ Mod4Mask,                     XK_z,      killclient,     {0} },
+	{ Mod4Mask,              	XK_z,  	   togglescratch,  {.ui = 1 } },
+	{ Mod4Mask|ControlMask,         XK_z,      spawn,          SHCMD("st -e ranger /home/jonathan") },
+	{ Mod4Mask|ShiftMask,           XK_z,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/myscripts") },
+	{ MODKEY|Mod4Mask,              XK_z,      spawn,          SHCMD("pcmanfm") },
 	/*{ MODKEY,                       XK_d,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bin/dmenu_run_history") },*/
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("gromit-mpx --toggle") },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("gromit-mpx --visibility") },
@@ -168,7 +167,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      spawn,          SHCMD("gromit-mpx --undo") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("gromit-mpx --redo") },
 	{ MODKEY|ControlMask,           XK_z,      spawn,          SHCMD("gromit-mpx --clear") },
-		
+	{ Mod4Mask,                     XK_period, spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/common-scripts/right-click.sh") },	
 };
 
 /* button definitions */

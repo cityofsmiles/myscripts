@@ -167,7 +167,7 @@ alias gpmn='git push -u origin main'
 alias cpcn='sh /home/jonathan/Documents/myscripts/bash-scripts/cp-configs.sh'
 alias gcal='python /home/jonathan/gencal/calculators/gen_cal_v2/gen_cal_v2.py'
 alias r='ranger'
-alias m='micro'
+alias m='mousepad'
 alias sm='sudo micro'
 alias format-usb='sh /home/jonathan/Documents/myscripts/bash-scripts/format-usb.sh'
 alias cleanzip='unzip "*.zip" && rm *.zip'
@@ -176,7 +176,7 @@ alias ll='exa'
 alias ecgacp='sh /home/jonathan/Documents/myscripts/bash-scripts/ecard-git-add-commit-push.sh'
 alias cutvid='sh /home/jonathan/Documents/myscripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/myscripts/bash-scripts/make-lowercase.sh'
-alias sshpine='ssh alarm@192.168.1.247'
+alias sshpine='ssh jonathan@192.168.1.247'
 alias cdwm='sudo cp -u /home/jonathan/Documents/myscripts/configs/config.h /home/jonathan/dwm/config.h;
 cd /home/jonathan/dwm; sudo make clean install'
 alias cdh='cd ~'
@@ -215,8 +215,8 @@ export PATH=/home/jonathan/Documents/myscripts/bash-scripts:$PATH
 
 export RANGER_LOAD_DEFAULT_RC=false
 
-#unset SESSION_MANAGER
-export SESSION_MANAGER=/usr/bin/lightdm
+unset SESSION_MANAGER
+#export SESSION_MANAGER=/usr/bin/lightdm
 
 cdl(){
 	cd $1
