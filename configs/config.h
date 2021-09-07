@@ -25,7 +25,8 @@ typedef struct {
 /*const char *spcmd1[] = {"urxvt", "-name", "spterm", "-geometry", "80x20", NULL };*/
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x20", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "80x20", "-e", "ranger", NULL };
-const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "40x10", NULL };
+const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "48x12", NULL };
+const char *spcmd4[] = {"st", "-n", "sptinyterm", "-g", "40x10", NULL };
 /*const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };*/
 /*const char *spcmd3[] = {"keepassxc", NULL };*/
 static Sp scratchpads[] = {
@@ -33,6 +34,7 @@ static Sp scratchpads[] = {
 	{"spterm",      spcmd1},
 	{"spfm",        spcmd2},
 	{"spminiterm",  spcmd3},
+	{"sptinyterm",  spcmd4},
 };
 
 /* tagging */
@@ -51,6 +53,7 @@ static const Rule rules[] = {
 	{ NULL,	       "spterm",   NULL,       SPTAG(0),     1,		  -1 },
 	{ NULL,	       "spfm",	   NULL,       SPTAG(1),     1,		  -1 },
 	{ NULL,	       "spminiterm", NULL,     SPTAG(2),     1,	          -1 },
+	{ NULL,	       "sptinyterm", NULL,     SPTAG(3),     1,	          -1 },
 };
 
 /* layout(s) */
@@ -140,7 +143,8 @@ static Key keys[] = {
 	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/notes") },
 	{ Mod4Mask|ControlMask,         XK_n,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/new-note.sh") },
 	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("pidgin") },
-	{ Mod4Mask,                     XK_q,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/turn-off-monitor.sh") },
+	{ Mod4Mask,                     XK_q,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/turn-off-monitor.sh") },	
+	{ Mod4Mask|ControlMask,         XK_q,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/croc-receive.sh") },
 	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("simplescreenrecorder") },
 	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh") },
@@ -156,7 +160,7 @@ static Key keys[] = {
 	{ Mod4Mask,              	XK_x,  	   togglescratch,  {.ui = 0 } },
 	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("st") },
 	{ Mod4Mask|ShiftMask,           XK_x,      togglescratch,  {.ui = 2 } },
-	{ MODKEY|Mod4Mask,              XK_x,      spawn,          SHCMD("poweroff") },
+	{ MODKEY|Mod4Mask,              XK_x,      togglescratch,  {.ui = 3 } },
 	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("st -e sudo systemctl restart display-manager") },
 	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },
 	{ Mod4Mask,              	XK_z,  	   togglescratch,  {.ui = 1 } },
