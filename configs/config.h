@@ -25,13 +25,14 @@ typedef struct {
 /*const char *spcmd1[] = {"urxvt", "-name", "spterm", "-geometry", "80x20", NULL };*/
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x20", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "80x20", "-e", "ranger", NULL };
+const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "40x10", NULL };
 /*const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };*/
 /*const char *spcmd3[] = {"keepassxc", NULL };*/
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
-	{"spranger",    spcmd2},
-	/*{"keepassxc",   spcmd3},*/
+	{"spfm",        spcmd2},
+	{"spminiterm",  spcmd3},
 };
 
 /* tagging */
@@ -49,7 +50,7 @@ static const Rule rules[] = {
 	{ "SimpleScreenRecorder",  NULL,       NULL,         1 << 4,       0,           -1 },
 	{ NULL,	       "spterm",   NULL,       SPTAG(0),     1,		  -1 },
 	{ NULL,	       "spfm",	   NULL,       SPTAG(1),     1,		  -1 },
-	/*{ NULL,		  "keepassxc",	NULL,		SPTAG(2),		0,			 -1 },*/
+	{ NULL,	       "spminiterm", NULL,     SPTAG(2),     1,	          -1 },
 };
 
 /* layout(s) */
@@ -154,7 +155,8 @@ static Key keys[] = {
 	{ Mod4Mask|ShiftMask,	        XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/work' https://www.facebook.com/messages") },
 	{ Mod4Mask,              	XK_x,  	   togglescratch,  {.ui = 0 } },
 	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("st") },
-	{ Mod4Mask|ShiftMask,           XK_x,      spawn,          SHCMD("poweroff") },
+	{ Mod4Mask|ShiftMask,           XK_x,      togglescratch,  {.ui = 2 } },
+	{ MODKEY|Mod4Mask,              XK_x,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("st -e sudo systemctl restart display-manager") },
 	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },
 	{ Mod4Mask,              	XK_z,  	   togglescratch,  {.ui = 1 } },
@@ -168,7 +170,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      spawn,          SHCMD("gromit-mpx --undo") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("gromit-mpx --redo") },
 	{ MODKEY|ControlMask,           XK_z,      spawn,          SHCMD("gromit-mpx --clear") },
-	{ Mod4Mask,                     XK_period, spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/right-click.sh") },	
+	/*{ Mod4Mask,                     XK_period, spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/right-click.sh") },	*/
+	{ Mod4Mask,                     XK_f,      spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/delete-word.sh") },
+	
 };
 
 /* button definitions */
