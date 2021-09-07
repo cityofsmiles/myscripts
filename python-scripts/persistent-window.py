@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-# python3 /home/jonathan/Documents/myscripts/Python-Scripts/persistent-window.py
+# python3 /home/jonathan/Documents/laptop/scripts/Python-Scripts/persistent-window.py
 
 import PySimpleGUI as sg
 

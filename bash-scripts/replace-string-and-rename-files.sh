@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash /home/jonathan/Documents/myscripts/replace-string-and-rename-files.sh
+# bash /home/jonathan/Documents/laptop/scripts/replace-string-and-rename-files.sh
 
 dir=$(pwd) 
 

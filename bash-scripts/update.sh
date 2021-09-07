@@ -6,4 +6,4 @@ cd /home/jonathan/dwm
 
 git pull https://git.suckless.org/dwm/ 
 
-sleep 5s
+read -r

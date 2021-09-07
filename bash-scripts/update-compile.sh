@@ -6,4 +6,4 @@ make
 
 sudo make install
 
-sleep 5s
+read -r

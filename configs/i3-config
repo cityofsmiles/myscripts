@@ -431,22 +431,22 @@ mode "$mode_gaps_outer" {
 
 # My personal shortcuts
 bindsym $super+c exec --no-startup-id simplescreenrecorder  
-bindsym $super+Control+c exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh
+bindsym $super+Control+c exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/launch-class.sh
 bindsym $super+space exec --no-startup-id xfce4-terminal --zoom=3
-bindsym $super+o exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh
+bindsym $super+o exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/turn-off-monitor.sh
 bindsym $super+Control+o exec --no-startup-id poweroff
 bindsym $super+Control+r exec --no-startup-id reboot
-bindsym $super+s exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents/myscripts'
+bindsym $super+s exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Documents/laptop/scripts'
 bindsym $super+h exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
 bindsym $super+d exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan'
-bindsym $super+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/i3-config'
+bindsym $super+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/laptop/scripts/configs/i3-config'
 bindsym $super+x exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/latex/20-21'
 bindsym $super+e exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/excel/shs/20-21'
-bindsym $super+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/bashrc'
+bindsym $super+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/laptop/scripts/configs/bashrc'
 bindsym $super+Control+w exec --no-startup-id brave
 bindsym $super+w exec --no-startup-id firefox
 bindsym $super+n exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Old-Docs/txt/notes'
-bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh
+bindsym $super+Control+n exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/new-note.sh
 bindsym $super+t exec --no-startup-id telegram-desktop
 bindsym $super+p exec --no-startup-id pidgin
 bindsym $super+f exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/personal" https://www.facebook.com/messages
@@ -459,7 +459,7 @@ bindsym $super+Shift+k exec --no-startup-id firefox -profile "/home/jonathan/.mo
 bindsym $super+Shift+m exec --no-startup-id firefox -profile "/home/jonathan/.mozilla/profiles/work" https://www.facebook.com/messages/t/3191614184254727
 bindsym $super+g exec --no-startup-id notify-send "Gromit-MPX is active." && notify-send "Hotkey:Alt+x  Undo:Alt+z" && gromit-mpx
 bindsym $super+a exec --no-startup-id /home/jonathan/texpander-master/texpander.sh
-bindsym $super+Control+a exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/new-texpander-entry.sh
+bindsym $super+Control+a exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/new-texpander-entry.sh
 bindsym $super+z exec --no-startup-id xfce4-screenshooter -f -s /home/jonathan/Pictures
 bindsym $super+Control+z exec --no-startup-id xfce4-screenshooter -r -s /home/jonathan/Pictures
 bindsym $super+v exec --no-startup-id xfce4-terminal --zoom=3 --command='ranger /home/jonathan/Downloads'
@@ -467,27 +467,27 @@ bindsym $super+m exec --no-startup-id xfce4-terminal --zoom=3 --command='micro'
 bindsym $super+k exec --no-startup-id kdenlive 
 bindsym $super+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal && sleep 10"
 bindsym $super+Control+l exec --no-startup-id urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=25" -e sh -c "cal -3 && sleep 10"
-bindsym $super+Shift+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/myscripts/configs/rc.conf'
+bindsym $super+Shift+Control+b exec --no-startup-id xfce4-terminal --zoom=3 --command='micro /home/jonathan/Documents/laptop/scripts/configs/rc.conf'
 bindsym $mod+x exec --no-startup-id gromit-mpx --toggle
 bindsym $mod+Shift+x exec --no-startup-id gromit-mpx --visibility
 bindsym $mod+Control+x exec --no-startup-id gromit-mpx --quit
 bindsym $mod+z exec --no-startup-id gromit-mpx --undo
 bindsym $mod+Shift+z exec --no-startup-id gromit-mpx --redo
 bindsym $mod+Control+z exec --no-startup-id gromit-mpx --clear
-bindsym $super+r exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/croc-receive.sh
+bindsym $super+r exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/croc-receive.sh
 
 # Launch personal startup apps
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-docs2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-excel2cp.sh 
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-latex2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-notes2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/rsync-word2cp.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/docs2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/latex2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/excel2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/notes2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/word2pine.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/recurrent-gdrive-backup.sh
-exec --no-startup-id /home/jonathan/Documents/myscripts/bash-scripts/feh-change-background.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/rsync-docs2cp.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/rsync-excel2cp.sh 
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/rsync-latex2cp.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/rsync-notes2cp.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/rsync-word2cp.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/docs2pine.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/latex2pine.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/excel2pine.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/notes2pine.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/word2pine.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/recurrent-gdrive-backup.sh
+exec --no-startup-id /home/jonathan/Documents/laptop/scripts/bash-scripts/feh-change-background.sh
 #exec --no-startup-id /usr/bin/pidgin
 

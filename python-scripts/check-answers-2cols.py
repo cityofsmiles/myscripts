@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# python3 '/home/jonathan/Documents/myscripts/Python-Scripts/check-answers-2cols.py' 
+# python3 '/home/jonathan/Documents/laptop/scripts/Python-Scripts/check-answers-2cols.py' 
 
 import PySimpleGUI as sg      
 import os

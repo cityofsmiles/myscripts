@@ -8,7 +8,7 @@ def simplecount(filename):
         lines += 1
     return lines
 
-os.chdir('/home/jonathan/Documents/myscripts/sample/')
+os.chdir('/home/jonathan/Documents/laptop/scripts/sample/')
 file = "sample-answer.txt"
 
 f=open(file)

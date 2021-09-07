@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# python3 '/home/jonathan/Documents/myscripts/Python-Scripts/check-answers.py' 
+# python3 '/home/jonathan/Documents/laptop/scripts/Python-Scripts/check-answers.py' 
 
 import PySimpleGUI as sg      
 import os

@@ -7,6 +7,6 @@ sleep 10s
 while true
 do
 #   feh --bg-scale "${img[$RANDOM % ${#img[@]} ]}"
-	feh --bg-scale --randomize /home/jonathan/Documents/wallpapers/* &
+	feh --bg-scale --randomize /home/jonathan/Documents/laptop/wallpapers/* &
 	sleep 10m
 done

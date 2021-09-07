@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash /home/jonathan/Documents/myscripts/batch-rename-files.sh
+# bash /home/jonathan/Documents/laptop/scripts/batch-rename-files.sh
 
 str="$1"
 

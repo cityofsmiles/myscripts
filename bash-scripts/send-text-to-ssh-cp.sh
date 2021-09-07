@@ -2,7 +2,7 @@
 
 # bash /storage/emulated/0/GNURoot/home/Scripts/termux/send-text-to-ssh.sh "fuck"
 
-source /home/jonathan/Documents/myscripts/bash-scripts/config.sh
+source /home/jonathan/Documents/laptop/scripts/bash-scripts/config.sh
 
 str="$1"
 

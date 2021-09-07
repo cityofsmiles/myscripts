@@ -20,7 +20,7 @@ window.close()
 abbr = values[0]
 fulltext = values[1]
 
-os.chdir("/home/jonathan/Documents/myscripts/bash-scripts/")
+os.chdir("/home/jonathan/Documents/laptop/scripts/bash-scripts/")
 
 subprocess.call(["./newmatch.sh", "%s" % abbr, "%s" % fulltext])
 

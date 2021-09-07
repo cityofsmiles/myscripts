@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-source /home/jonathan/Documents/myscripts/bash-scripts/config.sh
+source /home/jonathan/Documents/laptop/scripts/bash-scripts/config.sh
 
 while inotifywait -e modify,attrib,close_write,move,create,delete /home/jonathan/calcurse.ical
 do

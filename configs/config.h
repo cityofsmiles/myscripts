@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 5;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=16" };
-static const char dmenufont[]       = "monospace:size=16";
+static const char *fonts[]          = { "monospace:size=26" };
+static const char dmenufont[]       = "monospace:size=26";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -22,10 +22,10 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"urxvt", "-name", "spterm", "-geometry", "80x20", NULL };
-/*const char *spcmd1[] = {"st", "-n", "spterm", "-g", "60x15", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };*/
-const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };
+/*const char *spcmd1[] = {"urxvt", "-name", "spterm", "-geometry", "80x20", NULL };*/
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x20", NULL };
+const char *spcmd2[] = {"st", "-n", "spfm", "-g", "80x20", "-e", "ranger", NULL };
+/*const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };*/
 /*const char *spcmd3[] = {"keepassxc", NULL };*/
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -122,52 +122,53 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 	{ Mod4Mask,                     XK_a,      spawn,          SHCMD("sh /home/jonathan/texpander-master/texpander.sh") },
-	{ Mod4Mask|ControlMask,         XK_a,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/new-texpander-entry.sh") },
-	{ Mod4Mask|ShiftMask,           XK_a,      spawn,          SHCMD("st -e ranger /home/jonathan/Old-Docs/txt/notes/texpander") },
-	{ Mod4Mask,                     XK_b,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/bitwarden.sh") },
-	{ Mod4Mask,                     XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/myscripts/configs/config.h") },
-	{ Mod4Mask|ControlMask,         XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/myscripts/configs/bashrc") },
-	{ Mod4Mask|ShiftMask,           XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/myscripts/configs/rc.conf") },
-	{ Mod4Mask|ShiftMask|ControlMask,   XK_c,  spawn,          SHCMD("mousepad /home/jonathan/Documents/myscripts/configs/rifle.conf") },
-	{ MODKEY|Mod4Mask,              XK_c,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/common-scripts/croc-copy-send.sh") },
-	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/common-scripts/calendar.sh 1") },
-	{ Mod4Mask|ControlMask,         XK_d,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/common-scripts/calendar.sh 2") },
-	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("st -e ranger /home/jonathan/Old-Docs/excel/shs/20-21") },
-	{ Mod4Mask,                     XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/gromit-mpx.sh") },
-	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/launch-class.sh") },
+	{ Mod4Mask|ControlMask,         XK_a,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/new-texpander-entry.sh") },
+	{ Mod4Mask|ShiftMask,           XK_a,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/notes/texpander") },
+	{ Mod4Mask,                     XK_b,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/bitwarden.sh") },
+	{ Mod4Mask,                     XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/laptop/scripts/configs/config.h") },
+	{ Mod4Mask|ControlMask,         XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/laptop/scripts/configs/bashrc") },
+	{ Mod4Mask|ShiftMask,           XK_c,      spawn,          SHCMD("mousepad /home/jonathan/Documents/laptop/scripts/configs/rc.conf") },
+	{ Mod4Mask|ShiftMask|ControlMask,   XK_c,  spawn,          SHCMD("mousepad /home/jonathan/Documents/laptop/scripts/configs/rifle.conf") },
+	{ MODKEY|Mod4Mask,              XK_c,      spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/croc-copy-send.sh") },
+	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("st sh /home/jonathan/Documents/common-scripts/calendar.sh 1") },
+	{ Mod4Mask|ControlMask,         XK_d,      spawn,          SHCMD("st sh /home/jonathan/Documents/common-scripts/calendar.sh 2") },
+	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/excel/shs/20-21") },
+	{ Mod4Mask,                     XK_g,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/gromit-mpx.sh") },
+	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/launch-class.sh") },
 	{ Mod4Mask,                     XK_m,      spawn,          SHCMD("mousepad") },
-	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -e ranger /home/jonathan/Old-Docs/txt/notes") },
-	{ Mod4Mask|ControlMask,         XK_n,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/new-note.sh") },
+	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/notes") },
+	{ Mod4Mask|ControlMask,         XK_n,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/new-note.sh") },
 	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("pidgin") },
-	{ Mod4Mask,                     XK_q,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bash-scripts/turn-off-monitor.sh") },
-	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/common-scripts/croc-receive.sh") },
+	{ Mod4Mask,                     XK_q,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/turn-off-monitor.sh") },
+	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/croc-receive.sh") },
 	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("simplescreenrecorder") },
-	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("xfce4-screenshooter -f -s /home/jonathan/Pictures") },
-	{ Mod4Mask|ShiftMask,           XK_s,      spawn,          SHCMD("xfce4-screenshooter -r -s /home/jonathan/Pictures") },
+	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh") },
+	{ Mod4Mask|ShiftMask,           XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh selection") },
 	{ Mod4Mask,                     XK_t,      spawn,          SHCMD("telegram-desktop") },
-	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/bash-scripts/update.sh") },
-	{ Mod4Mask|ControlMask,         XK_u,      spawn,          SHCMD("urxvt -e sh /home/jonathan/Documents/myscripts/bash-scripts/update-compile.sh") },
-	{ MODKEY|Mod4Mask,              XK_v,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/common-scripts/croc-receive-paste.sh") },
+	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("st sh /home/jonathan/Documents/laptop/scripts/bash-scripts/update.sh") },
+	{ Mod4Mask|ControlMask,         XK_u,      spawn,          SHCMD("st sh /home/jonathan/Documents/laptop/scripts/bash-scripts/update-compile.sh") },
+	{ Mod4Mask,                     XK_v,      spawn,          SHCMD("clipmenu -i -fn Terminus:size=16 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'") },	
+	{ MODKEY|Mod4Mask,              XK_v,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/common-scripts/croc-receive-paste.sh") },
 	{ Mod4Mask,                     XK_w,      spawn,          SHCMD("firefox") },
 	{ Mod4Mask|ControlMask,         XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/personal'") },
 	{ Mod4Mask|ShiftMask,	        XK_w,      spawn,          SHCMD("firefox -profile '/home/jonathan/.mozilla/profiles/work' https://www.facebook.com/messages") },
 	{ Mod4Mask,              	XK_x,  	   togglescratch,  {.ui = 0 } },
-	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("urxvt") },
+	{ Mod4Mask|ControlMask,         XK_x,      spawn,          SHCMD("st") },
 	{ Mod4Mask|ShiftMask,           XK_x,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask,                     XK_y,      spawn,          SHCMD("st -e sudo systemctl restart display-manager") },
 	{ Mod4Mask|ControlMask,         XK_y,      spawn,          SHCMD("reboot") },
 	{ Mod4Mask,              	XK_z,  	   togglescratch,  {.ui = 1 } },
 	{ Mod4Mask|ControlMask,         XK_z,      spawn,          SHCMD("st -e ranger /home/jonathan") },
-	{ Mod4Mask|ShiftMask,           XK_z,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/myscripts") },
+	{ Mod4Mask|ShiftMask,           XK_z,      spawn,          SHCMD("st -e ranger /home/jonathan/Documents/laptop/scripts") },
 	{ MODKEY|Mod4Mask,              XK_z,      spawn,          SHCMD("pcmanfm") },
-	/*{ MODKEY,                       XK_d,      spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/bin/dmenu_run_history") },*/
+	/*{ MODKEY,                       XK_d,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bin/dmenu_run_history") },*/
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("gromit-mpx --toggle") },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("gromit-mpx --visibility") },
 	{ MODKEY|ControlMask,           XK_x,      spawn,          SHCMD("gromit-mpx --quit") },
 	{ MODKEY,                       XK_z,      spawn,          SHCMD("gromit-mpx --undo") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("gromit-mpx --redo") },
 	{ MODKEY|ControlMask,           XK_z,      spawn,          SHCMD("gromit-mpx --clear") },
-	{ Mod4Mask,                     XK_period, spawn,          SHCMD("sh /home/jonathan/Documents/myscripts/common-scripts/right-click.sh") },	
+	{ Mod4Mask,                     XK_period, spawn,          SHCMD("sh /home/jonathan/Documents/common-scripts/right-click.sh") },	
 };
 
 /* button definitions */

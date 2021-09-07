@@ -18,7 +18,7 @@ window.close()
 
 text_input = values[0]    
 
-os.chdir("/home/jonathan/Documents/myscripts/bash-scripts/")
+os.chdir("/home/jonathan/Documents/laptop/scripts/bash-scripts/")
 
 cmd = subprocess.check_call("./send-text-to-ssh-cp.sh '%s'" % text_input, shell=True)
 
