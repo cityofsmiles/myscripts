@@ -143,7 +143,7 @@ extract ()
 alias u='yay -Syu --noconfirm; cd /home/jonathan/dwm; git pull https://git.suckless.org/dwm/; cd ~'
 #alias u='yay; flatpak update'
 alias srb='source ~/.bashrc'
-alias in='yay -S'
+alias in='echo bacolod1987 | sudo -S yay -S'
 alias pr='yay -Rsn'
 alias sound='alsamixer'
 alias bright='xrandr --output LVDS-1 --brightness'
@@ -167,8 +167,8 @@ alias gpmn='git push -u origin main'
 alias cpcn='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/cp-configs.sh'
 alias gcal='python /home/jonathan/gencal/calculators/gen_cal_v2/gen_cal_v2.py'
 alias r='ranger'
-alias m='mousepad'
-alias sm='sudo micro'
+alias m='leafpad'
+alias sm='echo bacolod1987 | sudo -S micro'
 alias format-usb='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/format-usb.sh'
 alias cleanzip='unzip "*.zip" && rm *.zip'
 alias la='ls -a'
@@ -177,8 +177,8 @@ alias ecgacp='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/ecard-git-
 alias cutvid='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/cut-vid.sh'
 alias lower='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/make-lowercase.sh'
 alias sshpine='ssh jonathan@192.168.1.247'
-alias cdwm='sudo cp -u /home/jonathan/Documents/laptop/scripts/configs/config.h /home/jonathan/dwm/config.h;
-cd /home/jonathan/dwm; sudo make clean install'
+alias cdwm='echo bacolod1987 | sudo -S cp -u /home/jonathan/Documents/laptop/scripts/configs/config.h /home/jonathan/dwm/config.h;
+cd /home/jonathan/dwm; echo bacolod1987 | sudo -S make clean install'
 alias cdh='cd ~'
 alias mb='micro ~/Documents/phone/configs/bashrc && cp ~/Documents/phone/configs/bashrc ~/.bashrc && source ~/.bashrc'
 alias rb='reboot'
@@ -189,10 +189,13 @@ alias launchclass='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/launc
 alias scan='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/scanimage.sh'
 alias xl2jpg='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/xl2jpg.sh'
 alias vnc='x11vnc -display :0 -usepw'
+alias rand='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py'
+#alias rand='st -g 50x30 -f TerminessTTFNerdFontMono:pixelsize=28:style=medium:antialias=true:autohint=true'
+
 
 printf '\033[?1h\033=' >/dev/tty
 
-export VISUAL=mousepad
+export VISUAL=leafpad
 export EDITOR=micro
 export PAGER=less
 

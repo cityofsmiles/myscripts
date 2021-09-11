@@ -1,23 +1,21 @@
 #!/usr/bin/env python
-# File name: randomize-student-code.py
-# Description: Randomly select a student code given the number of boys and girls in a class.
+# File name: randomize-student-names.py
+# Description: Randomly select a student name given the class list.
 # Author: Jonathan R. Bacolod
-# Date: Sep. 8, 2021
+# Date: Sep. 12, 2021
 
 import sys
 import argparse
 import logging
 from logging import critical, error, info, warning, debug
 from random import choice, shuffle
-  
+from os import get_terminal_size   
 
 def parse_arguments():
     """Read arguments from a command line."""
     parser = argparse.ArgumentParser(description='Arguments get parsed via --commands')
-    parser.add_argument('-b', '--boys', metavar='boys', type=int, default=1,
-        help='Number of boys in class')
-    parser.add_argument('-g', '--girls', metavar='girls', type=int, default=1,
-        help='Number of girls in class')
+    parser.add_argument('-l', '--list', metavar='list', type=str, default="student-names.txt",
+        help='The class list')
     parser.add_argument('-v', metavar='verbosity', type=int, default=2,
         help='Verbosity of logging: 0 -critical, 1 -error, 2 -warning, 3 -info, 4 -debug')
  
@@ -29,33 +27,12 @@ def parse_arguments():
     return args
 
 
-def create_list(gender, r1, r2):
-  
-    # Testing if range r1 and r2 
-    # are equal
-    if (r1 == r2):
-        return r1
-  
-    else:
-  
-        # Create empty list
-        res = []
-  
-        # loop to append successors to 
-        # list until r2 is reached.
-        while(r1 < r2+1 ):
-              
-            res.append(gender + str(r1))
-            r1 += 1
-        return res
-
-
-def create_student_codes(num_boys, num_girls):
-    boys_list = create_list("B", 1, num_boys) 
-    girls_list = create_list("G", 1, num_girls)    
-    student_codes = boys_list + girls_list    
-    
-    return student_codes
+def create_list(filename):
+    with open(filename) as file_in:
+        class_list = []
+        for line in file_in:
+            class_list.append(line)
+    return class_list
 
 
 def main(list):
@@ -63,7 +40,7 @@ def main(list):
     chosen = choice(list)
     list.pop(list.index(chosen))
     new_list = list
-    print(chosen)
+    print("\n\n\n", chosen.center(get_terminal_size().columns), "\n\n\n\n")
     choose_again(new_list)
 
 
@@ -80,6 +57,6 @@ def choose_again(new_list):
 
 if __name__ == '__main__':
     args = parse_arguments()
-    student_codes = create_student_codes(args.boys, args.girls)
-    main(student_codes)
-    
+    class_list = create_list(args.list)
+    chosen = main(class_list)
+#    print(chosen)

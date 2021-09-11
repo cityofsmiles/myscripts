@@ -10,4 +10,3 @@ done &
 # Autostart script
 sh /home/jonathan/Documents/laptop/scripts/bash-scripts/autostart-scripts.sh &
 
-ranger &

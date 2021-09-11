@@ -15,3 +15,4 @@ sh /home/jonathan/Documents/laptop/scripts/bash-scripts/recurrent-gdrive-backup.
 #clipit &
 clipmenud &
 syncthing &
+ranger &
