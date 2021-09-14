@@ -1,11 +1,16 @@
-#!/usr/bin/env sh
-# scrot refuses to work with double quotes
-# shellcheck disable=SC2016
+#!/bin/sh
+
+#sxmo_keyboard.sh close
 
 cd /home/jonathan/Pictures
 
 if [ "$1" = "selection" ]; then
-	notify-send "select an area" && scrot -e 'echo $f | xsel -i -b' -d 1 -s -q 1 && notify-send "screenshot saved, filename copied to clipboard"
+	notify-send "select an area" && scrot -e 'echo $f | xsel -i -b' -d 1 -s -q 1 
 else
-	scrot -e 'echo $f | xsel -i -b' -d 1 -q 1 && notify-send "screenshot saved, filename copied to clipboard"
+	scrot -e 'echo $f | xsel -i -b' -d 1 -q 1 
 fi
+
+#sxmo_keyboard.sh open
+
+st /home/jonathan/Documents/laptop/scripts/bash-scripts/get-input.sh
+

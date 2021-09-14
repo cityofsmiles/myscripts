@@ -143,7 +143,7 @@ extract ()
 alias u='yay -Syu --noconfirm; cd /home/jonathan/dwm; git pull https://git.suckless.org/dwm/; cd ~'
 #alias u='yay; flatpak update'
 alias srb='source ~/.bashrc'
-alias in='echo bacolod1987 | sudo -S yay -S'
+alias in='yay -S'
 alias pr='yay -Rsn'
 alias sound='alsamixer'
 alias bright='xrandr --output LVDS-1 --brightness'
