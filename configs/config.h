@@ -27,7 +27,7 @@ const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x20", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "80x20", "-e", "ranger", NULL };
 /*const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "48x12", "-f", "monospace:size=16" NULL };*/
 const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "48x12", NULL };
-const char *spcmd4[] = {"st", "-n", "sptinyterm", "-g", "40x10", NULL };
+const char *spcmd4[] = {"st", "-n", "sptinyterm", "-g", "130x14", "-f", "monospace:size=16", NULL };
 /*const char *spcmd5[] = {"simplescreenrecorder", NULL };
 const char *spcmd6[] = {"leafpad", NULL };*/
 /*const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };*/
@@ -50,7 +50,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",	NULL,	   NULL,       0,	     1,		  -1 },
+	{ "feh", 	NULL,	   NULL,       0,	     0,		  -1 },
 	{ "telegram-desktop",NULL, NULL,       1 << 4,       0,           -1 },
 	{ "Google-chrome", NULL,   NULL,       1 << 3,       0,           -1 },
 	{ "Pidgin",     NULL,      NULL,       1 << 5,       0,           -1 },

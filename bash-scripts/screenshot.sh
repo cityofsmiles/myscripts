@@ -2,7 +2,8 @@
 
 #sxmo_keyboard.sh close
 
-cd /home/jonathan/Pictures
+#cd /home/jonathan/Pictures
+cd /home/jonathan/Documents/laptop/ipcrf-proofs/21-22/classes
 
 if [ "$1" = "selection" ]; then
 	notify-send "select an area" && scrot -e 'echo $f | xsel -i -b' -d 1 -s -q 1 

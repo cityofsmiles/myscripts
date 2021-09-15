@@ -40,7 +40,8 @@ def main(list):
     chosen = choice(list)
     list.pop(list.index(chosen))
     new_list = list
-    print("\n\n\n", chosen.center(get_terminal_size().columns), "\n\n\n\n")
+#    print("\n\n\n", chosen.center(get_terminal_size().columns), "\n\n\n\n")
+    print(chosen)
     choose_again(new_list)
 
 

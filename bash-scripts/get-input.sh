@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-cd /home/jonathan/Pictures
+#cd /home/jonathan/Pictures
+cd /home/jonathan/Documents/laptop/ipcrf-proofs/21-22/classes
 
 day=$( date +"%F_%H-%M-%S" )
 
