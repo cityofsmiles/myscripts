@@ -189,8 +189,11 @@ alias launchclass='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/launc
 alias scan='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/scanimage.sh'
 alias xl2jpg='sh /home/jonathan/Documents/laptop/scripts/bash-scripts/xl2jpg.sh'
 alias vnc='x11vnc -display :0 -usepw'
-alias rand='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py | figlet -c -t'
-#alias rand='st -g 50x30 -f TerminessTTFNerdFontMono:pixelsize=28:style=medium:antialias=true:autohint=true'
+alias ranc='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py -s Cooperation'
+alias rand='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py -s Diligence'
+alias ranh='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py -s Honesty'
+alias rano='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py -s Obedience'
+alias ranv='cd /home/jonathan/Documents/laptop/scripts/python-scripts/; python randomize-student-names.py -s Vigor'
 
 
 printf '\033[?1h\033=' >/dev/tty

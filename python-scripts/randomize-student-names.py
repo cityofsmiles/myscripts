@@ -9,11 +9,16 @@ import argparse
 import logging
 from logging import critical, error, info, warning, debug
 from random import choice, shuffle
-from os import get_terminal_size   
+import os 
+import subprocess
+import datetime
+
 
 def parse_arguments():
     """Read arguments from a command line."""
     parser = argparse.ArgumentParser(description='Arguments get parsed via --commands')
+    parser.add_argument('-s', '--section', metavar='section', type=str, default="bacolod",
+        help='The class section')
     parser.add_argument('-l', '--list', metavar='list', type=str, default="student-names.txt",
         help='The class list')
     parser.add_argument('-v', metavar='verbosity', type=int, default=2,
@@ -35,29 +40,66 @@ def create_list(filename):
     return class_list
 
 
-def main(list):
+def choose_name(list, file_path):
     shuffle(list)
     chosen = choice(list)
     list.pop(list.index(chosen))
-    new_list = list
-#    print("\n\n\n", chosen.center(get_terminal_size().columns), "\n\n\n\n")
-    print(chosen)
-    choose_again(new_list)
+    new_list = list.copy()
+    print_str(chosen)
+    choose_again(chosen, new_list, file_path)
 
 
-def choose_again(new_list):
-    again = input("") or "y"
+def print_str(string):
+    subprocess.Popen(['figlet', '-c', '-t', string])
 
-    if again.lower() == 'y':
-        main(new_list)           
+
+def show_compliment():
+    compliments = ["Great job!", "Incredible!", "Amazing!", "Excellent!", "Good job!", "Very good!"]
+    shuffle(compliments)
+    chosen_compliment = choice(compliments)
+    print_str(chosen_compliment)
+
+
+def create_file_path(section):
+    main_dir = "/home/jonathan/Documents/excel/21-22/Class-Records/recitations"
+    section_dir = os.path.join(main_dir, section)
+    if os.path.isdir(section_dir) == False:
+        os.mkdir(section_dir) 
+    now = datetime.datetime.now()
+    date_time_now = now.strftime('-%Y-%m-%d_%H-%M-%S')
+    section_file = section + date_time_now + ".txt"
+    file_path = os.path.join(section_dir, section_file)
+    return file_path
+
+
+def record_recited(student_name, file_path):    
+    with open(file_path, 'a') as fp:
+        fp.write(student_name)
+
+
+def choose_again(chosen, new_list, file_path):
+    again = input("") or "n"
+    if again.lower() == 'c':
+        show_compliment()
+        record_recited(chosen, file_path)  
+        choose_again(chosen, new_list, file_path)         
+    elif again.lower() == 'n':
+        choose_name(new_list, file_path)
+    elif again.lower() == 'o':
+        subprocess.Popen(['leafpad', file_path])
+        choose_again(chosen, new_list, file_path)
     elif again.lower() == 'q':
         quit()
     else:
-        main(new_list)
+        choose_name(new_list, file_path)
+
+
+def main():
+    args = parse_arguments()
+    class_list = create_list(args.list)
+    file_path = create_file_path(args.section)
+    choose_name(class_list, file_path)
 
 
 if __name__ == '__main__':
-    args = parse_arguments()
-    class_list = create_list(args.list)
-    chosen = main(class_list)
-#    print(chosen)
+    main()

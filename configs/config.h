@@ -27,7 +27,7 @@ const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x20", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "80x20", "-e", "ranger", NULL };
 /*const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "48x12", "-f", "monospace:size=16" NULL };*/
 const char *spcmd3[] = {"st", "-n", "spminiterm", "-g", "48x12", NULL };
-const char *spcmd4[] = {"st", "-n", "sptinyterm", "-g", "130x14", "-f", "monospace:size=16", NULL };
+const char *spcmd4[] = {"st", "-n", "sptinyterm", "-g", "130x8", "-f", "monospace:size=16", NULL };
 /*const char *spcmd5[] = {"simplescreenrecorder", NULL };
 const char *spcmd6[] = {"leafpad", NULL };*/
 /*const char *spcmd2[] = {"urxvt", "-name", "spfm", "-geometry", "80x20", "-e", "ranger", NULL };*/
@@ -160,10 +160,10 @@ static Key keys[] = {
 	{ Mod4Mask|ControlMask,         XK_q,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask|ControlMask,         XK_r,      spawn,          SHCMD("leafpad /home/jonathan/Documents/laptop/scripts/python-scripts/student-names.txt") },
 	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/cp-attendance.sh") },
-	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("simplescreenrecorder") },
 /*	{ Mod4Mask,                     XK_s,      togglescratch,  {.ui = 4 } },*/
-	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh") },
-	{ Mod4Mask|ShiftMask,           XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh selection") },
+	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh") },
+	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh selection") },
+	{ Mod4Mask|ShiftMask,           XK_s,      spawn,          SHCMD("simplescreenrecorder") },
 	{ Mod4Mask,                     XK_t,      spawn,          SHCMD("telegram-desktop") },
 	{ Mod4Mask,                     XK_u,      spawn,          SHCMD("st sh /home/jonathan/Documents/laptop/scripts/bash-scripts/update.sh") },
 	{ Mod4Mask|ControlMask,         XK_u,      spawn,          SHCMD("st sh /home/jonathan/Documents/laptop/scripts/bash-scripts/update-compile.sh") },
