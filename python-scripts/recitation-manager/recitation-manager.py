@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# File name: randomize-student-names.py
+# File name: recitation-manager.py
 # Description: Randomly select a student name given the class list.
 # Author: Jonathan R. Bacolod
 # Date: Sep. 12, 2021
@@ -17,7 +17,9 @@ import datetime
 def parse_arguments():
     """Read arguments from a command line."""
     parser = argparse.ArgumentParser(description='Arguments get parsed via --commands')
-    parser.add_argument('-s', '--section', metavar='section', type=str, default="bacolod",
+    parser.add_argument('-d', '--dir', metavar='dir', type=str, default="Recitations",
+        help='The folder path to save the results.')
+    parser.add_argument('-s', '--section', metavar='section', type=str, default="Section",
         help='The class section')
     parser.add_argument('-l', '--list', metavar='list', type=str, default="student-names.txt",
         help='The class list')
@@ -40,13 +42,13 @@ def create_list(filename):
     return class_list
 
 
-def choose_name(list, file_path):
+def choose_name(list, file_path, section_dir):
     shuffle(list)
     chosen = choice(list)
     list.pop(list.index(chosen))
     new_list = list.copy()
     print_str(chosen)
-    choose_again(chosen, new_list, file_path)
+    choose_again(chosen, new_list, file_path, section_dir)
 
 
 def print_str(string):
@@ -60,8 +62,7 @@ def show_compliment():
     print_str(chosen_compliment)
 
 
-def create_file_path(section):
-    main_dir = "/home/jonathan/Documents/excel/21-22/Class-Records/recitations"
+def create_file_path(section, main_dir):
     section_dir = os.path.join(main_dir, section)
     if os.path.isdir(section_dir) == False:
         os.mkdir(section_dir) 
@@ -69,7 +70,7 @@ def create_file_path(section):
     date_time_now = now.strftime('-%Y-%m-%d_%H-%M-%S')
     section_file = section + date_time_now + ".txt"
     file_path = os.path.join(section_dir, section_file)
-    return file_path
+    return file_path, section_dir
 
 
 def record_recited(student_name, file_path):    
@@ -77,17 +78,22 @@ def record_recited(student_name, file_path):
         fp.write(student_name)
 
 
-def choose_again(chosen, new_list, file_path):
+def choose_again(chosen, new_list, file_path, section_dir):
     again = input("") or "n"
     if again.lower() == 'c':
         show_compliment()
         record_recited(chosen, file_path)  
-        choose_again(chosen, new_list, file_path)         
+        choose_again(chosen, new_list, file_path, section_dir)         
     elif again.lower() == 'n':
-        choose_name(new_list, file_path)
+        choose_name(new_list, file_path, section_dir)
     elif again.lower() == 'o':
         subprocess.Popen(['leafpad', file_path])
-        choose_again(chosen, new_list, file_path)
+        choose_again(chosen, new_list, file_path, section_dir)
+    elif again.lower() == 's':
+        subprocess.Popen(['sh', 'summarize-recitation.sh', section_dir])
+        results_file = os.path.join(section_dir, "results", "recitation_results.txt")
+        subprocess.Popen(['leafpad', results_file])
+        choose_again(chosen, new_list, file_path, section_dir)
     elif again.lower() == 'q':
         quit()
     else:
@@ -97,8 +103,8 @@ def choose_again(chosen, new_list, file_path):
 def main():
     args = parse_arguments()
     class_list = create_list(args.list)
-    file_path = create_file_path(args.section)
-    choose_name(class_list, file_path)
+    file_path, section_dir = create_file_path(args.section, args.dir)
+    choose_name(class_list, file_path, section_dir)
 
 
 if __name__ == '__main__':

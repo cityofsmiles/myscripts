@@ -160,7 +160,7 @@ static Key keys[] = {
 	{ Mod4Mask|ControlMask,         XK_q,      spawn,          SHCMD("poweroff") },
 	{ Mod4Mask|ControlMask,         XK_r,      spawn,          SHCMD("leafpad /home/jonathan/Documents/laptop/scripts/python-scripts/student-names.txt") },
 	{ Mod4Mask,                     XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/cp-attendance.sh") },
-/*	{ Mod4Mask,                     XK_s,      togglescratch,  {.ui = 4 } },*/
+	{ Mod4Mask|ShiftMask,           XK_r,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/remove-newlines.sh") },
 	{ Mod4Mask,                     XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh") },
 	{ Mod4Mask|ControlMask,         XK_s,      spawn,          SHCMD("sh /home/jonathan/Documents/laptop/scripts/bash-scripts/screenshot.sh selection") },
 	{ Mod4Mask|ShiftMask,           XK_s,      spawn,          SHCMD("simplescreenrecorder") },
