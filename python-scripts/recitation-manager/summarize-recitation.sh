@@ -22,7 +22,7 @@ cd ./$results_dir
 
 cp $consolidated_names temp.txt
 
-sort -u temp.txt > sorted.txt
+sort -u +2 temp.txt > sorted.txt
 
 echo -e "Number of Recitation for the Present Quarter \n" > $recitation_results
 echo -e "Number of Recitation for the Present Quarter \n" > recitation_results.csv

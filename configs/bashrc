@@ -201,7 +201,7 @@ alias tsa='transmission-remote -t all -s'
 alias tsta='transmission-remote -t all -S'
 alias tl='transmission-remote -l'
 alias tra='transmission-remote -t all -r'
-
+alias recordquiz='quiz-recorder.sh -i /home/jonathan/Downloads -o /home/jonathan/Documents/excel/21-22/Class-Records/quizzes -g 1st-Grading -q'
 
 printf '\033[?1h\033=' >/dev/tty
 
@@ -226,7 +226,7 @@ up(){
   cd $d
 }
 
-export PATH=/home/jonathan/Documents/laptop/scripts/bash-scripts:$PATH 
+export PATH=/home/jonathan/Documents/laptop/scripts/bash-scripts:/home/jonathan/Documents/phone/bash-scripts:$PATH 
 
 export RANGER_LOAD_DEFAULT_RC=false
 
@@ -237,3 +237,5 @@ cdl(){
 	cd $1
 	ls
 }
+
+function trt { transmission-remote -t $1 -r;}

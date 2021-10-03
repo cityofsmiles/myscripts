@@ -56,7 +56,7 @@ def print_str(string):
 
 
 def show_compliment():
-    compliments = ["Great job!", "Incredible!", "Amazing!", "Excellent!", "Good job!", "Very good!"]
+    compliments = ["Great job!", "Incredible!", "Amazing!", "Excellent!", "Good job!", "Very good!", "Fabulous!", "Wonderful!"]
     shuffle(compliments)
     chosen_compliment = choice(compliments)
     print_str(chosen_compliment)

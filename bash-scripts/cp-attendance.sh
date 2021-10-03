@@ -2,8 +2,8 @@
 
 names="$( xsel -p )"
 
-filein=/home/jonathan/Documents/laptop/scripts/python-scripts/student-names.txt
-fileout=/home/jonathan/Documents/laptop/scripts/python-scripts/student-names-out.txt
+filein=/home/jonathan/Documents/laptop/scripts/python-scripts/recitation-manager/student-names.txt
+fileout=/home/jonathan/Documents/laptop/scripts/python-scripts/recitation-manager/student-names-out.txt
 
 echo "$names" > $filein
 
