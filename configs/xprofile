@@ -2,7 +2,7 @@ xset -b
 
 # Statusbar loop
 while true; do
-   xsetroot -name "$( if [ $( pgrep gromit-mpx ) ]; then echo G; fi ) | $( ip route get 1.1.1.1 | awk '{print $7}' ) | V: $(awk '/%/ {gsub(/[\[\]]/,""); print $4}' <(amixer sget Master)) | $( cat /sys/class/power_supply/BAT0/status | cut -c1-1 ): $( cat /sys/class/power_supply/BAT0/capacity )% | $( date +"%a, %b %d,%l:%M %p" )"
+   xsetroot -name "$( ip route get 1.1.1.1 | awk '{print $7}' ) | V: $(awk '/%/ {gsub(/[\[\]]/,""); print $4}' <(amixer sget Master)) | $( cat /sys/class/power_supply/BAT0/status | cut -c1-1 ): $( cat /sys/class/power_supply/BAT0/capacity )% | $( date +"%a, %b %d,%l:%M %p" )"
    sleep 10s  
 done &
 
@@ -10,3 +10,4 @@ done &
 # Autostart script
 sh /home/jonathan/Documents/laptop/scripts/bash-scripts/autostart-scripts.sh &
 
+#$( if [ $( pgrep gromit-mpx ) ]; then echo G; fi ) | 

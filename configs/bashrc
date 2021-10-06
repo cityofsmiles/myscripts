@@ -201,7 +201,10 @@ alias tsa='transmission-remote -t all -s'
 alias tsta='transmission-remote -t all -S'
 alias tl='transmission-remote -l'
 alias tra='transmission-remote -t all -r'
-alias recordquiz='quiz-recorder.sh -i /home/jonathan/Downloads -o /home/jonathan/Documents/excel/21-22/Class-Records/quizzes -g 1st-Grading -q'
+alias recordqz='quiz-recorder.sh -i /home/jonathan/Downloads/zip -o /home/jonathan/Documents/excel/21-22/Class-Records/quizzes -g 1st-Grading -q'
+alias recordfc='score-reporter.sh -i /home/jonathan/Downloads/zip -o /home/jonathan/Documents/excel/21-22/Class-Records/flashcards -g 1st-Grading'
+alias recordws='score-reporter.sh -i /home/jonathan/Downloads/zip -o /home/jonathan/Documents/excel/21-22/Class-Records/practice-exercises -g 1st-Grading'
+
 
 printf '\033[?1h\033=' >/dev/tty
 
